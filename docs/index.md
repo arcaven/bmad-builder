@@ -1,3 +1,1 @@
-# CIS Documentation Index
-
-TODO: do more than todo
+# BMad Builder Docs Index

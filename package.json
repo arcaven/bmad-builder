@@ -1,11 +1,10 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
-  "name": "bmad-module-name",
+  "name": "bmad-builder",
   "version": "0.1.0",
-  "description": "A BMad Core expansion module that [does what?]",
+  "description": "A BMad Core expansion module that guides users through the creation of Modules Workflow and Agents",
   "keywords": [
-    "bmad",
-    "creative"
+    "bmad"
   ],
   "repository": {
     "type": "git",
