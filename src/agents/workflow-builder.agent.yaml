@@ -1,6 +1,3 @@
-# Workflow Building Master Agent Definition
-# Specialized in creating, editing, and validating BMAD workflows with best practices
-
 agent:
   webskip: true
   metadata:
@@ -29,21 +26,21 @@ agent:
 
   menu:
     - trigger: CW or fuzzy match on create-workflow
-      exec: "{project-root}/_bmad/bmb/workflows/workflow/workflow.md"
+      exec: "{project-root}/_bmad/bmb/workflows/workflow/workflow-create-workflow.md"
       description: "[CW] Create a new BMAD workflow with proper structure and best practices"
 
     - trigger: EW or fuzzy match on edit-workflow
-      exec: "{project-root}/_bmad/bmb/workflows/workflow/workflow.md"
+      exec: "{project-root}/_bmad/bmb/workflows/workflow/workflow-edit-workflow.md"
       description: "[EW] Edit existing BMAD workflows while maintaining integrity"
 
     - trigger: VW or fuzzy match on validate-workflow
-      exec: "{project-root}/_bmad/bmb/workflows/workflow/workflow.md"
+      exec: "{project-root}/_bmad/bmb/workflows/workflow/workflow-validate-workflow.md"
       description: "[VW] Run validation check on BMAD workflows against best practices"
 
     - trigger: MV or fuzzy match on validate-max-parallel-workflow
-      exec: "{project-root}/_bmad/bmb/workflows/workflow/workflow.md"
+      exec: "{project-root}/_bmad/bmb/workflows/workflow/workflow-validate-max-parallel-workflow.md"
       description: "[MV] Run validation checks in MAX-PARALLEL mode against a workflow (requires a tool that supports Parallel Sub-Processes)"
 
     - trigger: RW or fuzzy match on convert-or-rework-workflow
-      exec: "{project-root}/_bmad/bmb/workflows/workflow/workflow.md"
+      exec: "{project-root}/_bmad/bmb/workflows/workflow/workflow-rework-workflow.md"
       description: "[RW] Rework a Workflow to a V6 Compliant Version"
