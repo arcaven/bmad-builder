@@ -83,8 +83,10 @@ See [bmad-module-template](https://github.com/bmad-code-org/bmad-module-template
 
 ## Documentation
 
-- [BMad Method Docs](http://docs.bmad-method.org)
-- [Module Development Guide](http://docs.bmad-method.org/how-to/module-development/)
+**[BMad Builder Documentation](http://bmad-builder-docs.bmad-method.org)** — Tutorials, how-to guides, and reference
+
+- [Getting Started](http://bmad-builder-docs.bmad-method.org/tutorials/)
+- [BMad Method Docs](http://docs.bmad-method.org) — Core framework documentation
 
 ## Community
 
