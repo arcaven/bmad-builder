@@ -2,7 +2,9 @@
 title: "Agents"
 ---
 
-Agents are AI assistants that help you accomplish tasks. Each agent has a unique personality, specialized capabilities, and an interactive menu.
+BMad Agents are AI Persona files that your agent can adopt to better help you accomplish tasks, communicate with or enjoy. Each agent has a unique personality, specialized capabilities, and an interactive help menu.
+
+Additionally some agents can optionally have their own file system based memory, making them capable of remembering vast amounts of information that is relevant. This can open up many interesting use cases for you to explore.
 
 ## Agent Types
 
@@ -29,19 +31,18 @@ Simple agents are complete in a single file. They excel at well-defined tasks an
 Expert agents have a **sidecar** - a companion folder containing additional instructions, workflows, and memory files. They remember context across sessions and handle complex, multi-step tasks.
 
 **Best for:**
-- Domain specialists (security architect, game designer, product manager)
-- Tasks requiring persistent memory
-- Complex workflows with multiple stages
-- Projects that grow over time
+- Domain specialists (design, legal, therapy, companion)
+- Agents with built in commands defined in separate files that only they will utilize - these are gemerally more complex than the simple one or two line prompts for simple agent custom menu items
+  - Note: These commands will be launched by loading the agent - another option is to create a simple agent and skills separately.
 
-**Example:** A game architect that remembers your design decisions, maintains consistency across sprints, and coordinates with other specialists.
+**Example:** An accounting expert that has specialized workflows to guide you through tax preparation, but also remembers work you have done together before, and remembers details about you.
 
 ## Key Differences
 
 | Feature          | Simple         | Expert                     |
 | ---------------- | -------------- | -------------------------- |
 | **Files**        | Single file    | Agent + sidecar folder     |
-| **Memory**       | Session only   | Persistent across sessions |
+| **Memory**       | Usually no     | Persistent across sessions |
 | **Capabilities** | Focused scope  | Multi-domain, extensible   |
 | **Setup**        | Zero config    | Sidecar initialization     |
 | **Best Use**     | Specific tasks | Ongoing projects           |
@@ -60,10 +61,10 @@ All agents share these building blocks:
 - Skills, tools, and knowledge the agent can apply
 - Mapped to specific menu commands
 
-### Menu
+### Menu Items
 - Interactive command list
 - Triggers, descriptions, and handlers
-- Auto-includes help and exit options
+- Auto-includes help, chat, bmad-help and exit options
 
 ### Critical Actions (optional)
 - Instructions that execute before the agent starts
@@ -75,23 +76,6 @@ All agents share these building blocks:
 Choose **Simple** for focused, one-off tasks with no memory needs. Choose **Expert** when you need persistent context and complex workflows.
 :::
 
-**Choose Simple when:**
-- You need a task done quickly and reliably
-- The scope is well-defined and won't change much
-- You don't need the agent to remember things between sessions
-
-**Choose Expert when:**
-- You're building something complex over time
-- The agent needs to maintain context (project history, decisions)
-- You want the agent to coordinate workflows or other agents
-- Domain expertise requires specialized knowledge bases
-
 ## Creating Custom Agents
 
-BMad provides the **BMad Builder (BMB)** module for creating your own agents. See the [Agent Creation Guide](https://github.com/bmad-code-org/bmad-builder/blob/main/docs/tutorials/create-custom-agent.md) for step-by-step instructions.
-
-
-
-## Customizing Existing Agents
-
-You can modify any agent's behavior without editing core files. See [BMad Customization](/docs/how-to/customization/index.md) for details. It is critical to never modify an installed agents .md file directly and follow the customization process, this way future updates to the agent or module its part of will continue to be updated and recompiled with the installer tool, and your customizations will still be retained.
+See the [Agent Creation Guide](https://github.com/bmad-code-org/bmad-builder/blob/main/docs/tutorials/create-custom-agent.md) for step-by-step instructions on how to create your own agents and use them in the BMad Ecosystem.
