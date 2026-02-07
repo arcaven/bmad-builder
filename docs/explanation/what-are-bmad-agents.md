@@ -2,13 +2,13 @@
 title: "Agents"
 ---
 
-BMad Agents are AI Persona files that your agent can adopt to better help you accomplish tasks, communicate with or enjoy. Each agent has a unique personality, specialized capabilities, and an interactive help menu.
+BMad Agents are AI Persona files that your agent can adopt to better help you accomplish tasks, communicate with, or interact with. Each agent has a unique personality, specialized capabilities, and an interactive help menu.
 
-Additionally some agents can optionally have their own file system based memory, making them capable of remembering vast amounts of information that is relevant. This can open up many interesting use cases for you to explore.
+Additionally, some agents can optionally have their own file system-based memory, making them capable of remembering vast amounts of relevant information. This can open up many interesting use cases for you to explore.
 
 ## Agent Types
 
-BMad has two primary agent types, designed for different use cases:
+BMad has two primary agent types for different use cases:
 
 ### Simple Agents
 
@@ -26,16 +26,16 @@ Simple agents are complete in a single file. They excel at well-defined tasks an
 
 ### Expert Agents
 
-**Powerful, memory-equipped, domain specialists.**
+**Memory-equipped, domain specialists.**
 
-Expert agents have a **sidecar** - a companion folder containing additional instructions, workflows, and memory files. They remember context across sessions and handle complex, multi-step tasks.
+Expert agents have a **sidecar**, a companion folder containing additional instructions, workflows, and memory files. They remember context across sessions and handle complex, multi-step tasks.
 
 **Best for:**
 - Domain specialists (design, legal, therapy, companion)
-- Agents with built in commands defined in separate files that only they will utilize - these are gemerally more complex than the simple one or two line prompts for simple agent custom menu items
-  - Note: These commands will be launched by loading the agent - another option is to create a simple agent and skills separately.
+- Agents with built-in commands defined in separate files that only they will use. These are generally more complex than the simple one or two line prompts for simple agent custom menu items
+  - Note: These commands will be launched by loading the agent. Another option is to create a simple agent and separate skills.
 
-**Example:** An accounting expert that has specialized workflows to guide you through tax preparation, but also remembers work you have done together before, and remembers details about you.
+**Example:** An accounting expert with specialized workflows for tax preparation. It remembers previous work and personal details about you.
 
 ## Key Differences
 
@@ -44,18 +44,24 @@ Expert agents have a **sidecar** - a companion folder containing additional inst
 | **Files**        | Single file    | Agent + sidecar folder     |
 | **Memory**       | Usually no     | Persistent across sessions |
 | **Capabilities** | Focused scope  | Multi-domain, extensible   |
-| **Setup**        | Zero config    | Sidecar initialization     |
+| **Setup**        | Zero configuration    | Sidecar initialization     |
 | **Best Use**     | Specific tasks | Ongoing projects           |
+
+## Which Should You Use?
+
+:::tip[Quick Decision]
+Choose **Simple** for focused, one-off tasks with no memory needs. Choose **Expert** when you need persistent context and complex workflows.
+:::
 
 ## Agent Components
 
 All agents share these building blocks:
 
 ### Persona
-- **Role** - What the agent does (expertise domain)
-- **Identity** - Who the agent is (personality, character)
-- **Communication Style** - How the agent speaks (tone, voice)
-- **Principles** - Why the agent acts (values, decision framework)
+- **Role**: What the agent does (expertise domain)
+- **Identity**: Who the agent is (personality, character)
+- **Communication Style**: How the agent speaks (tone, voice)
+- **Principles**: Why the agent acts (values, decision framework)
 
 ### Capabilities
 - Skills, tools, and knowledge the agent can apply
@@ -68,13 +74,7 @@ All agents share these building blocks:
 
 ### Critical Actions (optional)
 - Instructions that execute before the agent starts
-- Enable autonomous behaviors (e.g., "check git status before changes")
-
-## Which Should You Use?
-
-:::tip[Quick Decision]
-Choose **Simple** for focused, one-off tasks with no memory needs. Choose **Expert** when you need persistent context and complex workflows.
-:::
+- Enable autonomous behaviors (for example, "check git status before changes")
 
 ## Creating Custom Agents
 
