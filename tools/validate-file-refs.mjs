@@ -19,6 +19,9 @@
  *   - Template placeholders ([N], [name], [template])
  *   - Runtime variables ({output_folder}, {bmb_creations_output_folder}, etc.)
  *   - {{mustache}} template variables
+ *   - Lines with <!-- validate-file-refs:ignore --> comment
+ *   - Lines after <!-- validate-file-refs:ignore-next-line --> comment
+ *   - Refs with EXAMPLE- or invalid- filename prefix in data/ directories
  *
  * Usage:
  *   node tools/validate-file-refs.mjs              # Warning mode (exit 0)
@@ -113,6 +116,13 @@ const RELATIVE_PATH_QUOTED = /['"](\.\.\/?[^'"]+\.(?:md|yaml|yml|xml|json|csv|tx
 const RELATIVE_PATH_DOT = /['"](\.\/[^'"]+\.(?:md|yaml|yml|xml|json|csv|txt))['"]/g;
 const ABS_PATH_LEAK = /(?:\/Users\/|\/home\/|[A-Z]:\\)/;
 
+// Inline suppression comments
+const IGNORE_COMMENT = /<!--\s*validate-file-refs:ignore\s*-->/;
+const IGNORE_NEXT_LINE_COMMENT = /<!--\s*validate-file-refs:ignore-next-line\s*-->/;
+
+// Data directory example filename prefixes (auto-skipped)
+const DATA_DIR_EXAMPLE_PREFIXES = ['EXAMPLE-', 'invalid-'];
+
 // --- Helpers ---
 
 function escapeAnnotation(str) {
@@ -138,6 +148,30 @@ function offsetToLine(content, offset) {
  */
 function isBracketedPlaceholder(refStr) {
   return /\[[^\]]*[A-Za-z][^\]]*\]/.test(refStr);
+}
+
+/**
+ * Check if a line should be ignored via inline suppression comments.
+ * Supports <!-- validate-file-refs:ignore --> on the same line
+ * and <!-- validate-file-refs:ignore-next-line --> on the previous line.
+ */
+function isLineIgnored(contentLines, lineNumber) {
+  const idx = lineNumber - 1;
+  if (idx < 0 || idx >= contentLines.length) return false;
+  if (IGNORE_COMMENT.test(contentLines[idx])) return true;
+  if (idx > 0 && IGNORE_NEXT_LINE_COMMENT.test(contentLines[idx - 1])) return true;
+  return false;
+}
+
+/**
+ * Check if a reference uses a documentation-example filename convention
+ * inside a data/ directory. Files prefixed with EXAMPLE- or invalid-
+ * are treated as illustrative and skipped.
+ */
+function isDataDirExample(filePath, refStr) {
+  if (!filePath.includes('/data/')) return false;
+  const basename = path.basename(refStr);
+  return DATA_DIR_EXAMPLE_PREFIXES.some((prefix) => basename.startsWith(prefix));
 }
 
 /**
@@ -394,15 +428,21 @@ function extractCsvRefs(filePath, content) {
  */
 function checkAbsolutePathLeaks(filePath, content) {
   const leaks = [];
+  let ignoredCount = 0;
   const stripped = stripCodeBlocks(content);
   const lines = stripped.split('\n');
+  const originalLines = content.split('\n');
 
   for (const [i, line] of lines.entries()) {
     if (ABS_PATH_LEAK.test(line)) {
-      leaks.push({ file: filePath, line: i + 1, content: line.trim().slice(0, 100) });
+      if (isLineIgnored(originalLines, i + 1)) {
+        ignoredCount++;
+      } else {
+        leaks.push({ file: filePath, line: i + 1, content: line.trim().slice(0, 100) });
+      }
     }
   }
-  return leaks;
+  return { leaks, ignoredCount };
 }
 
 // --- Reference Resolution ---
@@ -440,6 +480,8 @@ export const _testing = {
   isExternalRef,
   isBracketedPlaceholder,
   isInstallGenerated,
+  isLineIgnored,
+  isDataDirExample,
   resolveRef,
   getSourceFiles,
   stripCodeBlocks,
@@ -464,13 +506,16 @@ if (_isMain) {
   let brokenRefs = 0;
   let totalLeaks = 0;
   let externalRefs = 0;
+  let ignoredRefs = 0;
   let filesWithIssues = 0;
+  const refsByType = { 'project-root': 0, relative: 0 };
   const allIssues = [];
 
   for (const filePath of files) {
     const relativePath = path.relative(PROJECT_ROOT, filePath);
     const content = fs.readFileSync(filePath, 'utf-8');
     const ext = path.extname(filePath);
+    const contentLines = content.split('\n');
 
     // Extract references by file type
     let refs;
@@ -482,11 +527,25 @@ if (_isMain) {
       refs = extractMarkdownRefs(filePath, content);
     }
 
+    // Filter inline-ignored and data-dir example refs
+    refs = refs.filter((ref) => {
+      if (ref.line && isLineIgnored(contentLines, ref.line)) {
+        ignoredRefs++;
+        return false;
+      }
+      if (isDataDirExample(filePath, ref.raw)) {
+        ignoredRefs++;
+        return false;
+      }
+      return true;
+    });
+
     const broken = [];
     const external = [];
 
     for (const ref of refs) {
       totalRefs++;
+      if (ref.type in refsByType) refsByType[ref.type]++;
 
       // Check for external module refs
       if (ref.type === 'project-root' && isExternalRef(ref.raw, moduleCode)) {
@@ -507,8 +566,9 @@ if (_isMain) {
     }
 
     // Absolute path leaks
-    const leaks = checkAbsolutePathLeaks(filePath, content);
+    const { leaks, ignoredCount: leakIgnored } = checkAbsolutePathLeaks(filePath, content);
     totalLeaks += leaks.length;
+    ignoredRefs += leakIgnored;
 
     const hasIssues = broken.length > 0 || leaks.length > 0;
     const hasInfo = external.length > 0;
@@ -547,18 +607,27 @@ if (_isMain) {
   }
 
   // Summary
+  const totalIssues = brokenRefs + totalLeaks;
   console.log(`\n${'─'.repeat(60)}`);
   console.log(`\nSummary:`);
-  console.log(`  Files scanned:      ${files.length}`);
-  console.log(`  References checked: ${totalRefs}`);
-  console.log(`  Broken references:  ${brokenRefs}`);
-  console.log(`  Absolute path leaks: ${totalLeaks}`);
-  console.log(`  External refs (skipped): ${externalRefs}`);
+  console.log(`  Files scanned:        ${files.length}`);
+  console.log(`  References checked:   ${totalRefs}`);
+  console.log(`    project-root refs:  ${refsByType['project-root']}`);
+  console.log(`    relative refs:      ${refsByType.relative}`);
+  console.log(`  External (skipped):   ${externalRefs}`);
+  if (ignoredRefs > 0) {
+    console.log(`  Suppressed (ignored): ${ignoredRefs}`);
+  }
+  console.log(`  Broken references:    ${brokenRefs}`);
+  console.log(`  Absolute path leaks:  ${totalLeaks}`);
+  console.log(
+    `  Total issues:         ${totalIssues} / ${totalRefs} refs (${totalRefs > 0 ? ((totalIssues / totalRefs) * 100).toFixed(1) : 0}%)`,
+  );
 
-  const hasIssues = brokenRefs > 0 || totalLeaks > 0;
+  const hasIssues = totalIssues > 0;
 
   if (hasIssues) {
-    console.log(`  Files affected:     ${filesWithIssues}`);
+    console.log(`  Files affected:       ${filesWithIssues}`);
     if (STRICT) {
       console.log(`\n  [STRICT MODE] Exiting with failure.`);
     } else {

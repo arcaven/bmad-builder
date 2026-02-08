@@ -27,7 +27,7 @@ const TOOL_PATH = path.join(__dirname, '..', 'tools', 'validate-file-refs.mjs');
 const SRC_DIR = path.join(__dirname, '..', 'src');
 
 // Known broken ref baseline — ratchet down as refs are fixed upstream
-const KNOWN_BASELINE = 30;
+const KNOWN_BASELINE = 26;
 
 // ANSI color codes (matching test-agent-schema.js pattern)
 const colors = {
@@ -316,7 +316,7 @@ async function testAbsolutePathLeaks() {
   const { checkAbsolutePathLeaks } = _testing;
 
   const leakyContent = 'Load config from /Users/developer/project/config.yaml\nAnother line.';
-  const leaks = checkAbsolutePathLeaks('test.md', leakyContent);
+  const { leaks } = checkAbsolutePathLeaks('test.md', leakyContent);
   if (leaks.length > 0) {
     pass('Detects /Users/ leak', `found ${leaks.length} leak(s)`);
   } else {
@@ -324,7 +324,7 @@ async function testAbsolutePathLeaks() {
   }
 
   const cleanContent = 'Load config from {project-root}/_bmad/bmb/config.yaml\nAnother line.';
-  const noLeaks = checkAbsolutePathLeaks('test.md', cleanContent);
+  const { leaks: noLeaks } = checkAbsolutePathLeaks('test.md', cleanContent);
   if (noLeaks.length === 0) {
     pass('Clean content', 'no false positives');
   } else {
@@ -479,6 +479,130 @@ async function testResolvableSkipLogic() {
 }
 
 /**
+ * Inline suppression comments
+ */
+async function testInlineIgnore() {
+  section('Inline suppression comments');
+
+  let _testing;
+  try {
+    const mod = await import(TOOL_PATH);
+    _testing = mod._testing || (mod.default && mod.default._testing);
+  } catch {
+    fail('Inline ignore (import)', 'Cannot import module');
+    return;
+  }
+
+  const { isLineIgnored, checkAbsolutePathLeaks } = _testing;
+
+  if (!isLineIgnored) {
+    fail('isLineIgnored', 'not exported');
+    return;
+  }
+
+  // Same-line ignore
+  const lines1 = ['normal line', 'path /Users/dev/foo <!-- validate-file-refs:ignore -->', 'another line'];
+  if (isLineIgnored(lines1, 2)) {
+    pass('Same-line ignore', 'detected');
+  } else {
+    fail('Same-line ignore', 'not detected');
+  }
+
+  // Next-line ignore
+  const lines2 = ['<!-- validate-file-refs:ignore-next-line -->', 'path /Users/dev/foo', 'another line'];
+  if (isLineIgnored(lines2, 2)) {
+    pass('Next-line ignore', 'detected');
+  } else {
+    fail('Next-line ignore', 'not detected');
+  }
+
+  // No ignore — normal line should not be ignored
+  if (isLineIgnored(lines1, 1)) {
+    fail('No ignore', 'normal line incorrectly ignored');
+  } else {
+    pass('No ignore', 'normal line not ignored');
+  }
+
+  // Abs-path leak suppressed by ignore-next-line
+  const ignoredContent = '<!-- validate-file-refs:ignore-next-line -->\n| `{project-root}` | `/Users/user/dev/BMAD-METHOD` |';
+  const { leaks, ignoredCount } = checkAbsolutePathLeaks('test.md', ignoredContent);
+  if (leaks.length === 0 && ignoredCount === 1) {
+    pass('Abs-path with ignore-next-line', 'suppressed (ignoredCount=1)');
+  } else {
+    fail('Abs-path with ignore-next-line', `expected 0 leaks + 1 ignored, got ${leaks.length} leaks + ${ignoredCount} ignored`);
+  }
+
+  // Abs-path leak suppressed by same-line ignore
+  const sameLineContent = '| `/Users/user/dev/project` | example <!-- validate-file-refs:ignore --> |';
+  const { leaks: leaks2 } = checkAbsolutePathLeaks('test.md', sameLineContent);
+  if (leaks2.length === 0) {
+    pass('Abs-path with same-line ignore', 'suppressed');
+  } else {
+    fail('Abs-path with same-line ignore', `expected 0 leaks, got ${leaks2.length}`);
+  }
+
+  // Abs-path leak without ignore still detected
+  const unleakedContent = '| `{project-root}` | `/Users/user/dev/BMAD-METHOD` |';
+  const { leaks: leaks3 } = checkAbsolutePathLeaks('test.md', unleakedContent);
+  if (leaks3.length > 0) {
+    pass('Abs-path without ignore', 'still detected');
+  } else {
+    fail('Abs-path without ignore', 'not detected');
+  }
+}
+
+/**
+ * Data directory example convention
+ */
+async function testDataDirExamples() {
+  section('Data directory example convention');
+
+  let _testing;
+  try {
+    const mod = await import(TOOL_PATH);
+    _testing = mod._testing || (mod.default && mod.default._testing);
+  } catch {
+    fail('Data dir examples (import)', 'Cannot import module');
+    return;
+  }
+
+  const { isDataDirExample } = _testing;
+
+  if (!isDataDirExample) {
+    fail('isDataDirExample', 'not exported');
+    return;
+  }
+
+  // EXAMPLE- prefix in data dir → skip
+  if (isDataDirExample('/src/workflows/agent/data/agent-validation.md', './EXAMPLE-step.md')) {
+    pass('EXAMPLE- in data dir', 'skipped');
+  } else {
+    fail('EXAMPLE- in data dir', 'not skipped');
+  }
+
+  // invalid- prefix in data dir → skip
+  if (isDataDirExample('/src/workflows/workflow/data/standards.md', './invalid-ref.md')) {
+    pass('invalid- in data dir', 'skipped');
+  } else {
+    fail('invalid- in data dir', 'not skipped');
+  }
+
+  // EXAMPLE- prefix NOT in data dir → not skipped
+  if (isDataDirExample('/src/workflows/workflow/steps-v/step-01.md', './EXAMPLE-step.md')) {
+    fail('EXAMPLE- outside data dir', 'incorrectly skipped');
+  } else {
+    pass('EXAMPLE- outside data dir', 'not skipped');
+  }
+
+  // Normal filename in data dir → not skipped
+  if (isDataDirExample('/src/workflows/agent/data/agent-validation.md', './step-01.md')) {
+    fail('Normal ref in data dir', 'incorrectly skipped');
+  } else {
+    pass('Normal ref in data dir', 'not skipped');
+  }
+}
+
+/**
  * AC7: CI step exists in quality.yaml
  */
 async function testCIIntegration() {
@@ -522,6 +646,8 @@ async function main() {
   await testBracketedPlaceholders();
   await testAbsolutePathLeaks();
   await testResolvableSkipLogic();
+  await testInlineIgnore();
+  await testDataDirExamples();
   await testCLIExitCodes();
   await testNpmScript();
   await testCIIntegration();
