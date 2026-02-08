@@ -268,12 +268,7 @@ async function testBracketedPlaceholders() {
   const { isBracketedPlaceholder } = _testing;
 
   // Template patterns should be detected
-  const templates = [
-    'step-[N]-[name].md',
-    '../templates/[template].md',
-    './step-02-[name].md',
-    '{output_folder}/[output].md',
-  ];
+  const templates = ['step-[N]-[name].md', '../templates/[template].md', './step-02-[name].md', '{output_folder}/[output].md'];
 
   for (const ref of templates) {
     if (isBracketedPlaceholder(ref)) {
@@ -412,7 +407,7 @@ async function testLiveBaseline() {
     // If --json isn't supported yet, count from text output
     const brokenMatch = result.stdout.match(/Broken references:\s*(\d+)/);
     const issueMatch = result.stdout.match(/Issues found:\s*(\d+)/);
-    const count = brokenMatch ? parseInt(brokenMatch[1], 10) : (issueMatch ? parseInt(issueMatch[1], 10) : -1);
+    const count = brokenMatch ? parseInt(brokenMatch[1], 10) : issueMatch ? parseInt(issueMatch[1], 10) : -1;
 
     if (count === -1) {
       fail('Baseline count', 'Cannot parse broken ref count from output');
@@ -473,11 +468,7 @@ async function testResolvableSkipLogic() {
   }
 
   // Unresolvable runtime variables
-  const unresolvable = [
-    '{bmb_creations_output_folder}/workflows/plan.md',
-    '{output_folder}/report.md',
-    '{{template_var}}/file.md',
-  ];
+  const unresolvable = ['{bmb_creations_output_folder}/workflows/plan.md', '{output_folder}/report.md', '{{template_var}}/file.md'];
 
   for (const ref of unresolvable) {
     if (!isResolvable(ref)) {

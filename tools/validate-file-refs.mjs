@@ -214,12 +214,6 @@ function mapInstalledToSource(refPath, moduleCode) {
   return path.join(SRC_DIR, subPath);
 }
 
-// --- Issue Factory ---
-
-function issue(file, line, ref, msg, severity = 'error') {
-  return { file, line, ref, issue: msg, severity };
-}
-
 // --- File Discovery ---
 
 function getSourceFiles(dir) {
@@ -405,7 +399,7 @@ function checkAbsolutePathLeaks(filePath, content) {
 
   for (const [i, line] of lines.entries()) {
     if (ABS_PATH_LEAK.test(line)) {
-      leaks.push({ file: filePath, line: i + 1, content: line.trim().substring(0, 100) });
+      leaks.push({ file: filePath, line: i + 1, content: line.trim().slice(0, 100) });
     }
   }
   return leaks;
@@ -460,9 +454,7 @@ const _isMain = process.argv[1] && path.resolve(process.argv[1]) === path.resolv
 if (_isMain) {
   const moduleCode = detectModuleCode(SRC_DIR);
   console.log(`\nValidating file references in: ${path.relative(process.cwd(), SRC_DIR)}/`);
-  console.log(
-    `Mode: ${STRICT ? 'STRICT (exit 1 on issues)' : 'WARNING (exit 0)'}${VERBOSE ? ' + VERBOSE' : ''}`,
-  );
+  console.log(`Mode: ${STRICT ? 'STRICT (exit 1 on issues)' : 'WARNING (exit 0)'}${VERBOSE ? ' + VERBOSE' : ''}`);
   console.log(`Module: ${moduleCode || '(unknown)'}\n`);
 
   const files = getSourceFiles(SRC_DIR);
@@ -509,8 +501,6 @@ if (_isMain) {
       if (resolved === null) continue; // Skipped (install-generated, external, outside src)
 
       if (!fs.existsSync(resolved)) {
-        const hasExt = path.extname(resolved) !== '';
-        if (!hasExt && fs.existsSync(resolved)) continue; // Directory exists
         broken.push({ ref, resolved: path.relative(PROJECT_ROOT, resolved) });
         brokenRefs++;
       }
@@ -534,9 +524,7 @@ if (_isMain) {
         allIssues.push({ file: relativePath, line: ref.line || 1, ref: ref.raw, issue: 'broken ref' });
         if (process.env.GITHUB_ACTIONS) {
           const line = ref.line || 1;
-          console.log(
-            `::warning file=${relativePath},line=${line}::${escapeAnnotation(`Broken reference: ${ref.raw} → ${resolved}`)}`,
-          );
+          console.log(`::warning file=${relativePath},line=${line}::${escapeAnnotation(`Broken reference: ${ref.raw} → ${resolved}`)}`);
         }
       }
 
@@ -544,9 +532,7 @@ if (_isMain) {
         console.log(`  [ABS-PATH] Line ${leak.line}: ${leak.content}`);
         allIssues.push({ file: relativePath, line: leak.line, ref: leak.content, issue: 'abs-path' });
         if (process.env.GITHUB_ACTIONS) {
-          console.log(
-            `::warning file=${relativePath},line=${leak.line}::${escapeAnnotation(`Absolute path leak: ${leak.content}`)}`,
-          );
+          console.log(`::warning file=${relativePath},line=${leak.line}::${escapeAnnotation(`Absolute path leak: ${leak.content}`)}`);
         }
       }
     } else if (VERBOSE && refs.length > 0) {
