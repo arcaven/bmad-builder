@@ -9,26 +9,36 @@ Create custom agents, workflows, and modules for BMad. This ranges from simple p
 
 | Resource | Description |
 |----------|-------------|
-| **[Agent Creation Guide](/docs/tutorials/advanced/create-custom-agent.md)** | Step-by-step guide to building your first agent |
-| **[Install Custom Modules](/docs/how-to/installation/install-custom-modules.md)** | Installing standalone simple and expert agents |
+| **[Create a Custom Agent](../tutorials/create-custom-agent.md)** | Build your first AI agent |
+| **[Create Your First Workflow](../tutorials/create-your-first-workflow.md)** | Design structured workflows |
+| **[Create Your First Module](../tutorials/create-your-first-module.md)** | Package and publish modules |
 
-## Agent Architecture
+## The Three Builders
 
-| Type | Description |
-|------|-------------|
-| **Simple Agent** | Self-contained, personality-driven |
-| **Expert Agent** | Memory, sidecar files, domain restrictions |
-| **Module Agent** | Workflow integration, professional tools |
+| Builder | Creates | Description |
+|---------|---------|-------------|
+| **[Bond](bond-wendy-morgan.md)** | Agents | Agent architecture and persona development |
+| **[Wendy](bond-wendy-morgan.md)** | Workflows | Process design and step architecture |
+| **[Morgan](bond-wendy-morgan.md)** | Modules | Full-stack systems design |
 
-## Key Concepts
+## Core Concepts
 
-Agents are authored in YAML with templates and standards. The compiler upon install of your agent will auto-inject:
+| Topic | Description |
+|-------|-------------|
+| **[What Are Agents](what-are-bmad-agents.md)** | AI personas with specialized capabilities |
+| **[What Are Workflows](what-are-workflows.md)** | Structured step-by-step processes |
+| **[What Are Modules](what-are-modules.md)** | Bundles of agents and workflows |
+| **[Custom Content Types](custom-content-types.md)** | Content categories in BMad |
 
-1. **Frontmatter**: Name and description from metadata
-2. **Activation Block**: Steps, menu handlers, rules
-3. **Menu Enhancement**: `*help` and `*exit` commands added automatically
-4. **Trigger Prefixing**: Your triggers auto-prefixed with `*`
+## Ecosystem Vision
 
-:::note[Learn More]
-See [Custom Content Types](./custom-content-types.md) for detailed explanations of all content categories.
-:::
+| Topic | Description |
+|-------|-------------|
+| **[The Module Ecosystem Vision](module-ecosystem-vision.md)** | How BMad modules create a shared ecosystem of capabilities across every domain |
+
+## Advanced Topics
+
+| Topic | Description |
+|-------|-------------|
+| **[Facilitation vs Generation](facilitation-over-generation.md)** | Workflow design philosophy |
+| **[Customize Workflows](customize-workflows.md)** | Adapting workflows to your needs |
