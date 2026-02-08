@@ -173,7 +173,6 @@ Creates a module from a brief.
 **Creates:**
 - Module directory structure
 - `module.yaml` with configuration
-- `_module-installer/` folder (if needed)
 - Agent and workflow spec files
 - README.md and TODO.md
 

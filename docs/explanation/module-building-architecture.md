@@ -64,15 +64,8 @@ your-module/
 │   ├── workflows/               # Workflow directory
 │   │   └── your-workflow/        # Workflow SPEC files (stubs)
 │   │       └── workflow.md
-│   └── _module-installer/       # Custom install prompts (if needed)
 ├── README.md                     # Documentation template
 └── TODO.md                       # Implementation checklist
-```
-
-For npm publishing, add:
-```
-├── package.json                  # NPM package config (publishing only)
-└── .npmignore                    # Excludes dev files from npm package
 ```
 
 **What these SPEC files contain:**
@@ -166,12 +159,6 @@ wedding-planner/
 └── TODO.md
 ```
 
-For npm publishing, add:
-```
-├── package.json
-└── .npmignore
-```
-
 **What the SPEC files contain:**
 
 `budget-specialist.agent.yaml` (spec):
@@ -260,12 +247,6 @@ wedding-planner/
 │   │   └── day-of-schedule/                 # ✅ Built by Wendy
 ├── README.md                                # ✅ Complete
 └── TODO.md                                  # ✅ All items checked
-```
-
-For npm publishing, add:
-```
-├── package.json                             # For npm distribution
-└── .npmignore
 ```
 
 ## Why This Architecture Works

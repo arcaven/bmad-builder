@@ -14,7 +14,6 @@ This tutorial uses the **BMad Builder (BMB)** module. Make sure you have BMad in
 - How to create a module brief with Morgan (module-builder)
 - How to build a complete module from your brief
 - How to configure module.yaml and module-help.csv
-- How to publish your module to npm
 
 :::note[Prerequisites]
 - BMad installed with the BMB module
@@ -24,7 +23,7 @@ This tutorial uses the **BMad Builder (BMB)** module. Make sure you have BMad in
 :::
 
 :::tip[Quick Path]
-`[PB]` create brief → `[CM]` build module → Configure → Publish to npm.
+`[PB]` create brief → `[CM]` build module → Configure.
 :::
 
 ## Understanding Modules
@@ -43,13 +42,7 @@ your-module/
 │   ├── agents/              # Agent definitions (.agent.yaml)
 │   ├── workflows/           # Workflow files
 │   └── tools/               # Small reusable tools
-├── README.md                # Module documentation
-```
-
-For npm publishing, add:
-```
-├── package.json             # NPM package info (for publishing only)
-└── .npmignore               # Excludes dev files from npm package
+└── README.md                # Module documentation
 ```
 
 ### What Makes a Complete Module?
@@ -61,7 +54,6 @@ For npm publishing, add:
 | **Agents** | AI assistants with specific roles | ⚪ Optional |
 | **Workflows** | Step-by-step processes | ⚪ Optional |
 | **Tools** | Reusable prompt files | ⚪ Optional |
-| **package.json** | NPM publishing, version info | 📦 For publishing only |
 
 ## Why Build Modules?
 
@@ -150,7 +142,6 @@ Morgan then builds your module structure:
 | Component | What Morgan Creates |
 |-----------|---------------------|
 | **module.yaml** | Module metadata, install questions, configuration |
-| **_module-installer/** | Custom install prompts (if needed) |
 | **Agent specs** | Placeholder/spec files for each agent |
 | **Workflow specs** | Placeholder/spec files for each workflow |
 | **README.md** | Module documentation template |
@@ -200,29 +191,6 @@ your-module,discovery,"Your Workflow Name",your-workflow,10,workflows/your-workf
 In a future release, `module-help.csv` will be auto-generated from workflow and agent metadata. For now, it's the manual way to tap into the power of the BMad help system.
 :::
 
-### package.json (For npm Publishing Only)
-
-If you plan to publish your module to npm, create `package.json`:
-
-```json
-{
-  "name": "@your-username/your-module",
-  "version": "0.1.0",
-  "description": "Your module description",
-  "keywords": ["bmad", "bmad-module"],
-  "author": "Your Name",
-  "license": "MIT"
-}
-```
-
-:::note[Package Naming]
-Use scoped naming (`@username/module-name` or `@bmad-code-org/` for official modules).
-:::
-
-:::note[Local Modules Don't Need package.json]
-If you're only using your module locally or sharing it directly (folder, git repo), you can skip `package.json` entirely. It's only required for npm publishing.
-:::
-
 ## Step 4: Implement Your Agents and Workflows
 
 Morgan created spec files during the build step. Now implement your agents and workflows:
@@ -237,7 +205,7 @@ For details on creating agents and workflows, see:
 
 ## Step 5: Validate Your Module
 
-Before publishing, validate your module:
+Before sharing, validate your module:
 
 ```
 [VM] or "validate-module"
@@ -251,36 +219,6 @@ Morgan checks:
 - Folder structure is correct
 
 Fix any issues Morgan identifies, then re-validate.
-
-## Step 6: Publish Your Module
-
-When your module is ready to share:
-
-### Option A: Quick Release
-
-```bash
-npm run release          # Patch (0.1.0 → 0.1.1)
-npm run release:minor    # Minor (0.1.0 → 0.2.0)
-npm run release:major    # Major (0.1.0 → 1.0.0)
-```
-
-This updates the version, creates a git tag, and pushes to trigger GitHub Actions publishing.
-
-### Option B: Manual Publishing
-
-```bash
-cd /path/to/your-module
-npm publish
-```
-
-You may be prompted for OTP if you have 2FA enabled on your npm account.
-
-:::note[First-Time Setup]
-If you're publishing for the first time:
-1. Create an npm account at https://www.npmjs.com
-2. Create an automation token at https://www.npmjs.com/settings/tokens
-3. Add as GitHub secret: `gh secret set NPM_TOKEN --repo your-repo`
-:::
 
 ## What You've Accomplished
 
@@ -305,26 +243,24 @@ Your module is now ready to:
 | Build module | `[CM]` or `create-module` |
 | Validate | `[VM]` or `validate-module` |
 | Edit module | `[EM]` or `edit-module` |
-| Quick release | `npm run release` |
-| Manual publish | `npm publish` |
 
 ## Common Questions
 
 **Should I use bmad-module-template?**
 
-Yes! The [bmad-module-template](https://github.com/bmad-code-org/bmad-module-template) provides a starting point with proper structure, npm setup, and GitHub Actions. You can also use Morgan to generate a module from scratch.
+Yes! The [bmad-module-template](https://github.com/bmad-code-org/bmad-module-template) provides a starting point with proper structure. You can also use Morgan to generate a module from scratch.
 
 **What's the difference between the brief and the module?**
 
 The brief is a **vision document** created through creative discovery. The module is the **implementation** built from that brief. Think of it as: brief = blueprint, module = building.
 
-**Can I update my module after publishing?**
+**Can I update my module after sharing it?**
 
-Yes! Use `npm run release` to bump the version and publish updates. Users can update with `npm update @your-username/your-module`.
+Yes! Share the updated module folder or repository. Users can reinstall to get the latest version.
 
 **How do I share my module privately?**
 
-Don't publish to npm. Share the module folder directly, or host it in a private Git repository. Users can install from a local path.
+Share the module folder directly, or host it in a private Git repository. Users can install from a local path.
 
 ## Getting Help
 
@@ -342,6 +278,6 @@ Don't publish to npm. Share the module folder directly, or host it in a private 
 :::tip[Key Takeaways]
 - **Plan first** — The brief ensures your module has a clear vision
 - **Structure matters** — Follow the standard module structure for compatibility
-- **Validate before publishing** — Use `[VM]` to check your work
-- **Share your work** — Publishing to npm makes your module available to the community
+- **Validate before sharing** — Use `[VM]` to check your work
+- **Share your work** — Modules can be shared via folders, git repos, or the community
 :::
