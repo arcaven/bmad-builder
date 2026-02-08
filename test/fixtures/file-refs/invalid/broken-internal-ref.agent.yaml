@@ -1,0 +1,11 @@
+# Fixture: broken internal {project-root}/_bmad/bmb/ ref
+# Expected: BROKEN (target does not exist in src/)
+agent:
+  metadata:
+    id: test-agent
+    name: Test
+    module: bmb
+  menu:
+    - trigger: XX or fuzzy match on nonexistent
+      exec: "{project-root}/_bmad/bmb/workflows/nonexistent/workflow.md"
+      description: "Broken ref"

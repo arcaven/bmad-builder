@@ -1,0 +1,2 @@
+module,phase,name,code,sequence,workflow-file,command,required,agent,options,description,output-location,outputs,
+bmb,anytime,Create Agent,CA,10,_bmad/bmb/workflows/agent/workflow-create-agent.md,bmad_bmb_create_agent,false,agent-builder,Create Mode,"Create agent",bmb_creations_output_folder,"agent",
