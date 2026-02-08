@@ -226,14 +226,14 @@ You've created a complete BMad module with:
 
 - A documented vision (module brief)
 - Proper module structure and configuration
+- module-help.csv for BMad help system integration
 - Agents, workflows, and tools
 - Install experience for users
-- NPM publishing setup
 
 Your module is now ready to:
 - Install locally for testing
 - Share with your team
-- Publish to npm for the community
+- Share with the community
 
 ## Quick Reference
 
