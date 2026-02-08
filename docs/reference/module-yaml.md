@@ -110,8 +110,10 @@ When validating modules, Morgan checks:
 - ✅ `config_key` values are unique
 - ✅ Options arrays are valid (if provided)
 
-## See Also
+## Resources
 
-- **[Builder Commands](docs/reference/builder-commands.md)** — Module commands
-- **[Create Your First Module](docs/tutorials/create-your-first-module.md)** — Module creation tutorial
-- **[What Are Modules](docs/explanation/what-are-modules.md)** — Module concepts
+| Resource | Description |
+|----------|-------------|
+| [Builder Commands](/docs/reference/builder-commands.md) | Module commands |
+| [Create Your First Module](/docs/tutorials/create-your-first-module.md) | Module creation tutorial |
+| [What Are Modules](/docs/explanation/what-are-modules.md) | Module concepts |

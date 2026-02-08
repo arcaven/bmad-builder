@@ -214,8 +214,10 @@ Validates a module.
 | Validate module | Morgan | `[VM]` |
 | Rework workflow | Wendy | `[RW]` |
 
-## See Also
+## Resources
 
-- **[Agent Reference](docs/reference/agent-schema.md)** — Agent YAML structure
-- **[Workflow Reference](docs/reference/workflow-schema.md)** — Workflow frontmatter and structure
-- **[Module Reference](docs/reference/module-yaml.md)** — Module configuration
+| Resource | Description |
+|----------|-------------|
+| [Agent Schema](/docs/reference/agent-schema.md) | Agent YAML structure |
+| [Workflow Schema](/docs/reference/workflow-schema.md) | Workflow frontmatter and structure |
+| [Module YAML](/docs/reference/module-yaml.md) | Module configuration |

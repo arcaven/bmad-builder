@@ -305,9 +305,11 @@ Don't publish to npm. Share the module folder directly, or host it in a private 
 
 ## Further Reading
 
-- **[What Are Modules](docs/explanation/what-are-modules.md)** — Deep technical details on module architecture
-- **[bmad-module-template](https://github.com/bmad-code-org/bmad-module-template)** — Starting point for new modules
-- **[Install Custom Modules](docs/how-to/install-custom-modules.md)** — Installing and using modules
+| Resource | Description |
+|----------|-------------|
+| [What Are Modules](/docs/explanation/what-are-modules.md) | Deep technical details on module architecture |
+| [bmad-module-template](https://github.com/bmad-code-org/bmad-module-template) | Starting point for new modules |
+| [Install Custom Modules](/docs/how-to/install-custom-modules.md) | Installing and using modules |
 
 :::tip[Key Takeaways]
 - **Plan first** — The brief ensures your module has a clear vision

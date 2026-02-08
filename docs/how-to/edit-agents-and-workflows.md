@@ -15,6 +15,118 @@ Modify existing agents and workflows using the builder's edit workflows, which h
 You can edit agent and workflow files directly. The edit workflows (`[EA]`, `[EW]`, `[EM]`) provide guided assistance and validation, but aren't required for simple changes.
 :::
 
+## Editing Workflows
+
+### Using the Edit Workflow Workflow
+
+Use Wendy's edit workflow for comprehensive workflow modifications:
+
+```
+[EW] or "edit-workflow"
+```
+
+Wendy will guide you through:
+
+| Step | What Happens |
+|------|--------------|
+| **Assess** | Load and review the existing workflow |
+| **Discover** | Describe what changes you want |
+| **Select** | Choose which parts to modify (steps, menus, frontmatter) |
+| **Apply** | Make the changes |
+| **Validate** | Check for compliance issues |
+
+### What You Can Edit
+
+| Element | Description |
+|---------|-------------|
+| **Frontmatter** | Name, description, goal, configuration |
+| **Steps** | Add, remove, or modify step files |
+| **Menus** | Change menu options and handlers |
+| **Templates** | Update output templates |
+| **Data** | Modify reference materials |
+
+### Workflow Conversion
+
+The edit workflow can convert non-compliant workflows to BMad format:
+
+**Detection:** Edit mode assesses workflow compliance first
+- Compliant → Continue to edit steps
+- Non-compliant → Offer conversion to `step-00-conversion`
+
+**Conversion process:**
+1. Load non-compliant workflow
+2. Extract essence and structure
+3. Create plan with `conversionFrom` metadata
+4. Build compliant workflow
+5. Verify coverage of original functionality
+
+### Tri-Modal Workflows
+
+For complex workflows with create/edit/validate modes, edit mode handles cross-mode integration:
+
+**Edit to Create:** Route to conversion for non-compliant input
+**Edit to Validation:** After edits, offer to run validation
+**Validation to Edit:** Validation reports consumed by edit mode for fixes
+
+### Direct Editing
+
+Workflows are markdown files. You can edit directly:
+
+```markdown
+---
+name: my-workflow
+description: My workflow description
+# Edit frontmatter here
+---
+
+# Workflow content here
+```
+
+After editing, validate your workflow:
+
+```
+[VW] or "validate-workflow"
+```
+
+## Adding Steps
+
+To add a step to an existing workflow:
+
+1. Create new step file: `step-XX-new-step.md`
+2. Update the previous step to load the new step
+3. Set the new step's `nextStepFile` to continue the sequence
+4. Validate the workflow
+
+### Step Type Considerations
+
+When adding steps, consider the step type:
+
+| Step Type | When to Use | Menu Pattern |
+|-----------|-------------|--------------|
+| **Init** | Starting a new workflow phase | Auto-proceed |
+| **Middle** | Collaborative content creation | A/P/C or C only |
+| **Branch** | User choice determines path | Custom letters |
+| **Final** | Completing the workflow | No menu |
+
+## Replacing Steps
+
+To replace a step entirely:
+
+1. Create replacement step file with same or new name
+2. Update previous step's `nextStepFile` to load replacement
+3. Remove or archive old step file
+4. Validate the workflow
+
+## Extracting to Data Files
+
+When a step exceeds 200-250 lines, extract content to `/data/` files.
+
+**Good candidates for extraction:**
+- Domain-specific reference materials
+- Reusable patterns or examples
+- Configuration data
+- Large lookup tables
+
 ## Editing Agents
 
 ### Using the Edit Agent Workflow
@@ -31,7 +143,7 @@ Bond will guide you through:
 |------|--------------|
 | **Load** | Select the agent file to edit |
 | **Discover** | Describe what changes you want |
-| **Select** | Choose which elements to modify (persona, commands, etc.) |
+| **Select** | Choose which elements to modify |
 | **Apply** | Make the changes with validation |
 | **Celebrate** | Review and confirm |
 
@@ -70,56 +182,6 @@ After editing, rebuild the agent:
 npx bmad-method build <agent-name>
 ```
 
-## Editing Workflows
-
-### Using the Edit Workflow Workflow
-
-Wendy's edit workflow helps you modify workflows:
-
-```
-[EW] or "edit-workflow"
-```
-
-Wendy will guide you through:
-
-| Step | What Happens |
-|------|--------------|
-| **Assess** | Load and review the existing workflow |
-| **Discover** | Describe what changes you want |
-| **Select** | Choose which parts to modify (steps, menus, frontmatter) |
-| **Apply** | Make the changes |
-| **Validate** | Check for compliance issues |
-
-### What You Can Edit
-
-| Element | Description |
-|---------|-------------|
-| **Frontmatter** | Name, description, goal, startup method |
-| **Steps** | Add, remove, or modify step files |
-| **Menus** | Change menu options and handlers |
-| **Templates** | Update output templates |
-| **Data** | Modify reference materials |
-
-### Direct Editing
-
-Workflows are markdown files. You can edit directly:
-
-```markdown
----
-name: my-workflow
-description: My workflow description
-# Edit frontmatter here
----
-
-# Workflow content here
-```
-
-After editing, validate your workflow:
-
-```
-[VW] or "validate-workflow"
-```
-
 ## Editing Modules
 
 For module-level changes (configuration, install questions), use Morgan's edit workflow:
@@ -143,11 +205,23 @@ Always validate after making changes:
 | Workflows | `[VW]` or `validate-workflow` |
 | Modules | `[VM]` or `validate-module` |
 
+### Max-Parallel Workflow Validation
+
+For high-capability LLMs (like Claude):
+
+```
+[MV] or "validate-max-parallel-workflow"
+```
+
+This hyper-optimized validation uses task agents to validate multiple workflow aspects simultaneously in sub-processes for dramatically faster results.
+
 Validation checks for:
 - Proper YAML formatting
 - Required fields are present
 - Compliance with BMad standards
 - Menu and command structure
+- Frontmatter variable usage
+- Step file size limits
 
 ## Common Edit Scenarios
 
@@ -172,11 +246,14 @@ menu:
 3. Update the previous step to load the new step
 4. Validate the workflow
 
-### Updating Agent Principles
+### Converting a Non-Compliant Workflow
 
-1. Run `[EA]` or open the agent YAML
-2. Modify the `principles` field in persona
-3. Rebuild and test the agent
+1. Run `[EW]` or `[RW]` (rework)
+2. Edit mode detects non-compliance
+3. Accept conversion offer
+4. Review conversion plan
+5. Build compliant workflow
+6. Verify coverage
 
 ## Tips for Effective Editing
 
@@ -195,6 +272,9 @@ menu:
 
 ## Related Guides
 
-- **[Validate Agents and Workflows](docs/how-to/validate-agents-and-workflows.md)** — Quality assurance
-- **[Create a Custom Agent](docs/tutorials/create-custom-agent.md)** — Creating agents
-- **[Create Your First Workflow](docs/tutorials/create-your-first-workflow.md)** — Creating workflows
+| Guide | Description |
+|-------|-------------|
+| [Validate Agents and Workflows](/docs/how-to/validate-agents-and-workflows.md) | Quality assurance |
+| [Create a Custom Agent](/docs/tutorials/create-custom-agent.md) | Creating agents |
+| [Create Your First Workflow](/docs/tutorials/create-your-first-workflow.md) | Creating workflows |
+| [Workflow Customization](/docs/explanation/customize-workflows.md) | Tri-modal structure and patterns |

@@ -245,8 +245,10 @@ For phased entries, include context about when in the journey to use this step.
 | Hardcoded paths | Breaks on different installations | Use relative paths like `_bmad/mwm/...` |
 | Missing agent for agent features | Can't route to agent | Populate `agent` column |
 
-## See Also
+## Resources
 
-- **[Create Your First Module](docs/tutorials/create-your-first-module.md)** — Module creation tutorial
-- **[Module YAML Reference](docs/reference/module-yaml.md)** — Module configuration
-- **[What Are Modules](docs/explanation/what-are-modules.md)** — Module concepts
+| Resource | Description |
+|----------|-------------|
+| [Create Your First Module](/docs/tutorials/create-your-first-module.md) | Module creation tutorial |
+| [Module YAML](/docs/reference/module-yaml.md) | Module configuration |
+| [What Are Modules](/docs/explanation/what-are-modules.md) | Module concepts |

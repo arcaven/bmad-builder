@@ -188,8 +188,10 @@ persona:
     - Reflection transforms experience into wisdom
 ```
 
-## See Also
+## Resources
 
-- **[Develop Agent Persona](docs/how-to/develop-agent-persona.md)** - Full four-field persona system
-- **[Agent Schema Reference](docs/reference/agent-schema.md)** - Complete field reference
-- **[Brainstorming Agent Context](https://github.com/bmad-code-org/bmad-builder/tree/main/src/workflows/agent/data/brainstorm-context.md)** - Framework for creating memorable agents
+| Resource | Description |
+|----------|-------------|
+| [Develop Agent Persona](/docs/how-to/develop-agent-persona.md) | Full four-field persona system |
+| [Agent Schema](/docs/reference/agent-schema.md) | Complete field reference |
+| [Brainstorming Agent Context](https://github.com/bmad-code-org/bmad-builder/tree/main/src/workflows/agent/data/brainstorm-context.md) | Framework for creating memorable agents |

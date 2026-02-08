@@ -13,20 +13,18 @@ You've never used a builder like this. Not even close.
 
 Skills? Plugins? They're isolated, forgettable, dead the moment you install them. BMad is **alive** — a living ecosystem where agents know what you need before you do, workflows build on each other, and everything actually works together.
 
-Build a therapist who remembers your breakthroughs six months later. A tax workflow that finds deductions TurboTax was too scared to mention. A fitness coach that evolves with every single workout. Then put it in a module and sell it.
+Build a therapist who remembers your breakthroughs six months later. A tax workflow that finds deductions other tools miss. A fitness coach that evolves with every single workout. Then put it in a module and share it with the world, or build your own super power tools to get ahead.
 
 **Workflows are the SaaS of the future. You're the architect now.**
-
----
 
 ## Quick Links
 
 | Section | Purpose |
 | ------- | ------- |
-| **[Tutorials](tutorials/)** | Start building in 15 minutes |
-| **[How-To Guides](how-to/)** | Master specific techniques |
-| **[Explanation](explanation/)** | Under the hood |
-| **[Reference](reference/)** | Technical specs |
+| **[Tutorials](/docs/tutorials/)** | Start building in 15 minutes |
+| **[How-To Guides](/docs/how-to/)** | Master specific techniques |
+| **[Explanation](/docs/explanation/)** | Under the hood |
+| **[Reference](/docs/reference/)** | Technical specs |
 
 ## Start Here
 
@@ -43,7 +41,7 @@ This isn't just for developers. This is for anyone who's ever thought "there sho
 | Type | Builder | What It Actually Does |
 |------|---------|------------------------|
 | **Agents** | Bond | AI personas with memory, expertise, and actual personality |
-| **Workflows** | Wendy | Structured processes that guide you through complex shit step-by-step |
+| **Workflows** | Wendy | Structured processes that guide you through complex challenges step-by-step |
 | **Modules** | Morgan | Entire ecosystems you can share with the world (or sell) |
 
 **The secret sauce:** Unlike plugins that die in isolation, BMad modules form an intelligent network. Agents know when to suggest workflows. Workflows call the right agents automatically. The help system knows what you're trying to do before you do.
@@ -55,13 +53,13 @@ This isn't just for developers. This is for anyone who's ever thought "there sho
 | Domain | Example | What It Actually Does |
 |--------|---------|------------------------|
 | **Mental Health** | Therapist Agent | Remembers your patterns, notices what you don't, celebrates breakthroughs you forgot |
-| **Money** | Tax Workflow Module | Finds deductions TurboTax was too cowardly to mention, creates bulletproof documentation |
+| **Money** | Tax Workflow Module | Finds deductions other tools miss, creates bulletproof documentation |
 | **Creative** | Story Architect Module | Character arcs, plot holes, dialogue that doesn't sound like a robot |
 | **Learning** | Personal Tutor Module | Remembers how YOUR brain works, adapts accordingly |
-| **Fitness** | Coach Module | Reads your progress, evolves your plan, actually gives a shit |
+| **Fitness** | Coach Module | Reads your progress, evolves your plan, truly cares |
 | **Music** | Songwriter's Assistant | Lyrics, chords, arrangements — remembers your style |
 | **Cooking** | Personal Chef Module | "What can I actually make with this?" — answered forever |
-| **Travel** | Trip Planner Module | Local secrets, budget optimization, schedules that don't suck |
+| **Travel** | Trip Planner Module | Local secrets, budget optimization, schedules that work |
 | **Parenting** | Family Coordinator | Activity ideas, milestone tracking, sanity preservation |
 | **Gaming** | D&D Campaign Module | Characters that matter, worlds that breathe, stories that remember |
 | **Spirituality** | Meditation Guide | Sessions that adapt to your actual progress |
@@ -85,8 +83,6 @@ This isn't hypothetical. People are already building tools that solve real probl
 | **Bond** | `[CA]`, `[EA]`, `[VA]` | Agents with personality, memory, and expertise |
 | **Wendy** | `[CW]`, `[EW]`, `[VW]`, `[MV]`, `[RW]` | Workflows that think through problems with you |
 | **Morgan** | `[PB]`, `[CM]`, `[EM]`, `[VM]` | Entire modules ready to ship |
-
----
 
 ## Community
 

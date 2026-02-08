@@ -292,9 +292,11 @@ wedding-planner/
   - [ ] Test each component independently
   - [ ] Run `[VM]` to validate complete module
 
-## See Also
+## Resources
 
-- **[Create Your First Module](docs/tutorials/create-your-first-module.md)** — Hands-on tutorial
-- **[Discover Your Module Idea](docs/how-to/discover-your-module-idea.md)** — Finding the right idea
-- **[What Are Modules](docs/explanation/what-are-modules.md)** — Module concepts
-- **[Agent or Module Decision Guide](docs/how-to/agent-or-module-decision.md)** — What to build
+| Resource | Description |
+|----------|-------------|
+| [Create Your First Module](/docs/tutorials/create-your-first-module.md) | Hands-on tutorial |
+| [Discover Your Module Idea](/docs/how-to/discover-your-module-idea.md) | Finding the right idea |
+| [What Are Modules](/docs/explanation/what-are-modules.md) | Module concepts |
+| [Agent or Module Decision Guide](/docs/how-to/agent-or-module-decision.md) | What to build |

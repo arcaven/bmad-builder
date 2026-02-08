@@ -366,8 +366,10 @@ agent:
 - ✅ ALL sidecar paths: `{project-root}/_bmad/_memory/{sidecar-folder}/...`
 - ✅ `{project-root}` is literal (not replaced)
 
-## See Also
+## Resources
 
-- **[Builder Commands](docs/reference/builder-commands.md)** — Agent creation commands
-- **[Create a Custom Agent](docs/tutorials/create-custom-agent.md)** — Agent creation tutorial
-- **[What Are Agents](docs/explanation/what-are-bmad-agents.md)** — Agent architecture explanation
+| Resource | Description |
+|----------|-------------|
+| [Builder Commands](/docs/reference/builder-commands.md) | Agent creation commands |
+| [Create a Custom Agent](/docs/tutorials/create-custom-agent.md) | Agent creation tutorial |
+| [What Are Agents](/docs/explanation/what-are-bmad-agents.md) | Agent architecture explanation |

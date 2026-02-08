@@ -315,9 +315,11 @@ agent:
 - [ ] Each field is distinct and doesn't duplicate others
 - [ ] Reading the full persona creates a vivid, consistent character
 
-## See Also
+## Resources
 
-- **[Crafting Agent Principles](docs/explanation/crafting-agent-principles.md)** - Deep dive on writing effective principles
-- **[Communication Styles Reference](docs/reference/communication-styles.md)** - 62 pre-defined communication style presets
-- **[Agent Schema Reference](docs/reference/agent-schema.md)** - Complete field reference
-- **[Brainstorming Agent Context](https://github.com/bmad-code-org/bmad-builder/tree/main/src/workflows/agent/data/brainstorm-context.md)** - Framework for creating memorable agents
+| Resource | Description |
+|----------|-------------|
+| [Crafting Agent Principles](/docs/explanation/crafting-agent-principles.md) | Deep dive on writing effective principles |
+| [Communication Styles](/docs/reference/communication-styles.md) | 62 pre-defined communication style presets |
+| [Agent Schema](/docs/reference/agent-schema.md) | Complete field reference |
+| [Brainstorming Agent Context](https://github.com/bmad-code-org/bmad-builder/tree/main/src/workflows/agent/data/brainstorm-context.md) | Framework for creating memorable agents |

@@ -417,7 +417,9 @@ Consider:
 - **Add domain-specific** language relevant to your agent's expertise
 - **Test with users** to ensure the style resonates
 
-## See Also
+## Resources
 
-- **[Develop Agent Persona](docs/how-to/develop-agent-persona.md)** - Full persona development guide
-- **[Agent Schema Reference](docs/reference/agent-schema.md)** - Complete field reference
+| Resource | Description |
+|----------|-------------|
+| [Develop Agent Persona](/docs/how-to/develop-agent-persona.md) | Full persona development guide |
+| [Agent Schema](/docs/reference/agent-schema.md) | Complete field reference |

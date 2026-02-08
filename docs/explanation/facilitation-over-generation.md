@@ -239,18 +239,18 @@ But the **core creative and analytical work** happens through facilitated discov
 
 ### For Individuals
 - **Deeper insights** than pure generation. Ideas connect to your actual knowledge.
-- **Full ownership** of creative outputs and decisions
-- **Skill development** in structured thinking and problem-solving
+- **Full ownership** of creative outputs and decisions.
+- **Skill development** in structured thinking and problem-solving.
 - **More memorable and actionable** results. You understand the "why".
 
 ### For Teams
-- **Shared creative experience** that builds alignment and trust
-- **Aligned understanding** through documented exploration
-- **Documented rationale** for future reference and onboarding
-- **Stronger buy-in** to outcomes because everyone participated in discovery
+- **Shared creative experience** that builds alignment and trust.
+- **Aligned understanding** through documented exploration.
+- **Documented rationale** for future reference and onboarding.
+- **Stronger buy-in** to outcomes because everyone participated in discovery.
 
 ### For Implementation
-- **Outputs match reality** because they came from your actual constraints
-- **Easier iteration** because you understand the reasoning behind choices
-- **Confident implementation** because you can defend every decision
-- **Reduced rework** because facilitation catches issues early
+- **Outputs match reality** because they came from your actual constraints.
+- **Easier iteration** because you understand the reasoning behind choices.
+- **Confident implementation** because you can defend every decision.
+- **Reduced rework** because facilitation catches issues early.

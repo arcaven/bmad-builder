@@ -339,8 +339,10 @@ Use both! Codes are for power users, fuzzy matching makes it accessible to every
 
 Yes, but be aware that users may have memorized them. Document breaking changes.
 
-## See Also
+## Resources
 
-- **[Agent Schema Reference](docs/reference/agent-schema.md)** - Complete menu schema
-- **[Critical Actions Reference](docs/reference/critical-actions.md)** - Activation behavior
-- **[What Are Agents](docs/explanation/what-are-bmad-agents.md)** - Agent architecture
+| Resource | Description |
+|----------|-------------|
+| [Agent Schema](/docs/reference/agent-schema.md) | Complete menu schema |
+| [Critical Actions](/docs/reference/critical-actions.md) | Activation behavior |
+| [What Are Agents](/docs/explanation/what-are-bmad-agents.md) | Agent architecture |

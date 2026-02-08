@@ -247,9 +247,11 @@ As many as you need, but keep them focused on activation behavior. Complex logic
 
 No, they only run once when the agent is first activated.
 
-## See Also
+## Resources
 
-- **[Agent Schema Reference](docs/reference/agent-schema.md)** - Complete agent structure
-- **[Design Agent Menus](docs/how-to/design-agent-menus.md)** - Menu system design
-- **[What Are Agents](docs/explanation/what-are-bmad-agents.md)** - Agent architecture
-- **[Agent Compilation](https://github.com/bmad-code-org/bmad-builder/tree/main/src/workflows/agent/data/agent-compilation.md)** - How YAML becomes compiled agents
+| Resource | Description |
+|----------|-------------|
+| [Agent Schema](/docs/reference/agent-schema.md) | Complete agent structure |
+| [Design Agent Menus](/docs/how-to/design-agent-menus.md) | Menu system design |
+| [What Are Agents](/docs/explanation/what-are-bmad-agents.md) | Agent architecture |
+| [Agent Compilation](https://github.com/bmad-code-org/bmad-builder/tree/main/src/workflows/agent/data/agent-compilation.md) | How YAML becomes compiled agents |

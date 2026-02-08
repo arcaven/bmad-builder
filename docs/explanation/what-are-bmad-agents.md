@@ -153,4 +153,4 @@ Then use the **Module Builder** instead of a single agent.
 
 ## Creating Custom Agents
 
-See the [Agent Creation Tutorial](docs/tutorials/create-custom-agent.md) for step-by-step instructions.
+See the [Create a Custom Agent](/docs/tutorials/create-custom-agent.md) tutorial for step-by-step instructions.
