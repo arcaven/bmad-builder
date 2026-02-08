@@ -30,6 +30,12 @@ Create custom agents, workflows, and modules for BMad. This ranges from simple p
 | **[What Are Modules](what-are-modules.md)** | Bundles of agents and workflows |
 | **[Custom Content Types](custom-content-types.md)** | Content categories in BMad |
 
+## Architecture & Process
+
+| Topic | Description |
+|-------|-------------|
+| **[Understanding Module Building](module-building-architecture.md)** | How module creation works from planning to scaffolding to implementation |
+
 ## Ecosystem Vision
 
 | Topic | Description |

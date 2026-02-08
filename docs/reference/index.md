@@ -15,6 +15,7 @@ Technical documentation for BMad Builder configuration and options.
 | **[Agent Schema](agent-schema.md)** | Agent YAML file structure |
 | **[Workflow Schema](workflow-schema.md)** | Workflow frontmatter and step structure |
 | **[Module YAML](module-yaml.md)** | Module configuration reference |
+| **[Module Help CSV](module-help-csv.md)** | Complete reference for module-help.csv file structure |
 
 ## Configuration
 

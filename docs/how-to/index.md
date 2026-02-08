@@ -7,10 +7,11 @@ description: Practical guides for specific BMad Builder tasks
 
 Step-by-step guides for completing specific tasks with BMad Builder.
 
-## Ideation & Discovery
+## Planning & Decision-Making
 
 | Guide | Description |
 |-------|-------------|
+| **[Agent or Module? What Should I Build?](agent-or-module-decision.md)** | Decide whether to build a simple agent, expert agent, or full module |
 | **[Discover Your Module Idea](discover-your-module-idea.md)** | Find the perfect module idea by exploring your problems, expertise, and opportunities |
 
 ## Editing & Validation
