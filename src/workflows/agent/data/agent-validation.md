@@ -82,14 +82,20 @@ Validate agents meet BMAD quality standards. The validation approach depends on 
 
 - [ ] `agent.metadata.hasSidecar` is `false`
 - [ ] Single .agent.yaml file (no sidecar folder)
-- [ ] All content contained in YAML (no external file dependencies)
-- [ ] No `critical_actions` section
+- [ ] No `{project-root}/_bmad/_memory/` paths to sidecar folders
 - [ ] Total size under ~250 lines (unless justified)
+
+### critical_actions Validation (OPTIONAL)
+
+- [ ] If present, `critical_actions` contains activation behaviors
+- [ ] No references to sidecar files (no sidecar exists)
+- [ ] No placeholder text in critical_actions
+- [ ] No compiler-injected steps (Load persona, Load config, greeting, etc.)
 
 ### Path Validation
 
 - [ ] No sidecar paths present
-- [ ] No `{project-root}/_bmad/_memory/` paths
+- [ ] No `{project-root}/_bmad/_memory/` paths to sidecar folders
 
 ### Reference Comparison
 
@@ -102,7 +108,7 @@ Validate agents meet BMAD quality standards. The validation approach depends on 
 ### Structure Validation
 
 - [ ] `agent.metadata.hasSidecar` is `true`
-- [ ] `agent.critical_actions` exists (MANDATORY)
+- [ ] `agent.metadata.sidecar-folder` is specified
 - [ ] Sidecar folder exists: `{agent-name}-sidecar/`
 - [ ] Folder name matches agent name
 - [ ] `instructions.md` exists in sidecar (recommended)
@@ -113,7 +119,7 @@ Validate agents meet BMAD quality standards. The validation approach depends on 
 - [ ] **communication_style** includes memory reference patterns
 - [ ] Memory references feel natural: "Last time you mentioned..." or "I've noticed patterns..."
 
-### critical_actions Validation (MANDATORY)
+### critical_actions Validation (MANDATORY for hasSidecar: true)
 
 - [ ] `critical_actions` section exists
 - [ ] Contains at minimum 3 actions
@@ -204,6 +210,15 @@ critical_actions:
   - 'Load COMPLETE file {project-root}/_bmad/_memory/{sidecar-folder}/memories.md'
   - 'Load COMPLETE file {project-root}/_bmad/_memory/{sidecar-folder}/instructions.md'
   - 'ONLY read/write files in {project-root}/_bmad/_memory/{sidecar-folder}/'
+```
+
+### Issue: critical_actions for hasSidecar: false
+
+**Note:** Agents without sidecar can have critical_actions for other activation behaviors:
+```yaml
+critical_actions:
+  - 'Give user an inspirational quote before showing menu'
+  - 'Review {project-root}/finances/ for most recent data file'
 ```
 
 ### Issue: Communication Style Missing Memory References (hasSidecar: true)

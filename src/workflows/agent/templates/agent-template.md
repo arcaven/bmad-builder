@@ -40,7 +40,7 @@ agent:
       - {{this}}
       {{/each}}
 
-  {{#if has_sidecar}}
+  {{#if has_critical_actions}}
   critical_actions:
     {{#each critical_actions}}
     - '{{{this}}}'

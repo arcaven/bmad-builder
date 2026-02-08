@@ -79,7 +79,7 @@ Perform these checks systematically - validate EVERY rule specified in agentComp
 **For Agents WITHOUT Sidecar (hasSidecar is false):**
 - [ ] No sidecar requirements
 - [ ] No sidecar-folder path in metadata
-- [ ] No critical_actions section
+- [ ] If critical_actions present, no sidecar file references
 - [ ] Menu handlers use only internal references (#) or inline prompts
 - [ ] Total size under ~250 lines (unless justified)
 

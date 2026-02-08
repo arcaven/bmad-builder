@@ -323,8 +323,8 @@ Two forms:
 
 - [ ] Under ~250 lines
 - [ ] No external dependencies
-- [ ] No `critical_actions` section
 - [ ] No sidecar path references
+- [ ] If critical_actions present, no sidecar file references
 
 ### WITH Sidecar (hasSidecar: true)
 
@@ -345,7 +345,7 @@ Two forms:
 4. **Sensible defaults** in install_config (if using)
 5. **Numbered steps** in multi-step prompts
 6. **Keep under ~250 lines** for agents without sidecar
-7. **critical_actions MANDATORY** for agents with sidecar
+7. **critical_actions** for any activation behavior (sidecar or other)
 8. **Enforce domain restrictions** for agents with sidecar
 9. **Reference past naturally** - Don't dump memory
 10. **Design for growth** - Structure for accumulation (with sidecar)

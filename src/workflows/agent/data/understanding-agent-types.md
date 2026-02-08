@@ -70,6 +70,10 @@ agent-name.agent.yaml (~250 lines max)
 - Motivational Gym Bro (hype up your workout)
 - Sassy Fortune Teller (mystical snark)
 
+**Optional critical_actions:**
+- Can have critical_actions for activation behaviors (quotes, data fetches, etc.)
+- Must NOT reference sidecar files (no sidecar exists)
+
 **Reference:** `./data/reference/simple-examples/commit-poet.agent.yaml`
 
 ---
@@ -124,6 +128,7 @@ critical_actions:
 | ----------------- | ------------------------ | ------------------------------ |
 | File structure    | Single YAML (~250 lines) | YAML + sidecar/ (files)       |
 | Persistent memory | No                       | Yes                            |
+| critical_actions  | Optional (other behaviors) | MANDATORY (load sidecar files) |
 | Custom workflows  | Inline prompts           | Sidecar workflows (on-demand)  |
 | File access       | Project/output           | Restricted to sidecar domain  |
 | Session state     | Stateless                | Remembers across sessions      |

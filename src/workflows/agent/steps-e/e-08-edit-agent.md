@@ -104,7 +104,8 @@ For each planned edit:
 **true → false (Removing sidecar):**
 - Set `hasSidecar: false`
 - Remove `metadata.sidecar-folder` and `metadata.sidecar-path`
-- Remove `critical_actions` section
+- If critical_actions contains only sidecar references, remove the section
+- If critical_actions contains non-sidecar activation behaviors, keep and clean sidecar references
 - Remove sidecar references from menu actions
 - Optionally archive sidecar folder
 

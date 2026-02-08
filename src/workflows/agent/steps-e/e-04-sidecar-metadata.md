@@ -57,8 +57,8 @@ If user wants metadata changes:
 **For sidecar conversion:**
 - "Converting from hasSidecar: {current} to {target}"
 - Explain implications:
-  - false → true: Need to create sidecar folder, add critical_actions
-  - true → false: Remove sidecar fields, remove critical_actions
+  - false → true: Need to create sidecar folder, add critical_actions with sidecar file loading
+  - true → false: Remove sidecar fields; if critical_actions only has sidecar references, remove section; otherwise keep non-sidecar critical_actions
 - Update editPlan with conversion
 
 **For metadata field changes:**

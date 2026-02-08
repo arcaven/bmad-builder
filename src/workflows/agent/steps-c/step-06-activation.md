@@ -165,12 +165,21 @@ Ask user:
 - Each action should be clear and scoped
 - Document rationale for each
 
-**For agents WITH sidecar, critical_actions typically include:**
+**For agents WITH sidecar, critical_actions MUST include:**
 ```
 - "Load COMPLETE file {project-root}/_bmad/_memory/{sidecar-folder}/memories.md"
 - "Load COMPLETE file {project-root}/_bmad/_memory/{sidecar-folder}/instructions.md"
 - "ONLY read/write files in {project-root}/_bmad/_memory/{sidecar-folder}/ - private space"
 ```
+Plus any additional activation behaviors the agent needs.
+
+**For agents WITHOUT sidecar, critical_actions are OPTIONAL and can include:**
+```
+- "Give user an inspirational quote before showing menu"
+- "Fetch latest data from {project-root}/finances/ before displaying menu"
+- "Display a quick status summary on activation"
+```
+Agents without sidecar omit critical_actions entirely if no activation behavior is needed.
 
 **If omitting:**
 - State clearly: "This agent will not have critical_actions"

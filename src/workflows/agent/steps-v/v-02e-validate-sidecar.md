@@ -89,7 +89,7 @@ For each sidecar path reference in agent YAML:
 **IF hasSidecar = false:**
 - [ ] Mark sidecar validation as N/A
 - [ ] Confirm no sidecar-folder path in metadata
-- [ ] Confirm no critical_actions section
+- [ ] Confirm no sidecar references in critical_actions (if present)
 - [ ] Confirm no sidecar references in menu handlers
 
 ### 3. Append Findings to Report

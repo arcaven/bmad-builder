@@ -40,10 +40,10 @@ agent:
     principles:
       - "Core belief or methodology"
 
-  critical_actions:              # Optional - for Expert agents only
-    - "Load ./sidecar/memories.md"
-    - "Load ./sidecar/instructions.md"
-    - "ONLY access ./sidecar/"
+  critical_actions:              # Optional - for any agent with activation behavior
+    - "Load COMPLETE file {project-root}/_bmad/_memory/journal-sidecar/memories.md"
+    - "Load COMPLETE file {project-root}/_bmad/_memory/journal-sidecar/instructions.md"
+    - "ONLY read/write files in {project-root}/_bmad/_memory/journal-sidecar/"
 
   prompts:                        # Optional - for Simple/Expert agents
     - id: prompt-name
@@ -220,7 +220,7 @@ When building agent YAML, **DO NOT:**
 **DO:**
 - [ ] Define metadata (id, name, title, icon, module)
 - [ ] Define persona (role, identity, communication_style, principles)
-- [ ] Define critical_actions (Expert agents only)
+- [ ] Define critical_actions (if agent has activation behavior)
 - [ ] Define prompts with IDs (Simple/Expert agents only)
 - [ ] Define menu with your custom items only
 - [ ] Use proper trigger format: `XX or fuzzy match on command-name`
@@ -228,24 +228,42 @@ When building agent YAML, **DO NOT:**
 
 ---
 
-## Expert Agent: critical_actions
+## Agent critical_actions
 
-For Expert agents with sidecars, your `critical_actions` become activation steps:
+For any agent with activation behavior, your `critical_actions` become activation steps.
+
+### Agents with sidecar (hasSidecar: true):
 
 ```yaml
 critical_actions:
-  - "Load COMPLETE file ./agent-sidecar/memories.md"
-  - "Load COMPLETE file ./agent-sidecar/instructions.md"
-  - "ONLY read/write files in ./agent-sidecar/"
+  - "Load COMPLETE file {project-root}/_bmad/_memory/journal-sidecar/memories.md"
+  - "Load COMPLETE file {project-root}/_bmad/_memory/journal-sidecar/instructions.md"
+  - "ONLY read/write files in {project-root}/_bmad/_memory/journal-sidecar/"
 ```
 
 The compiler injects these as steps 4, 5, 6 in the activation block:
 
 ```xml
-<step n="4">Load COMPLETE file ./agent-sidecar/memories.md</step>
-<step n="5">Load COMPLETE file ./agent-sidecar/instructions.md</step>
-<step n="6">ONLY read/write files in ./agent-sidecar/</step>
+<step n="4">Load COMPLETE file {project-root}/_bmad/_memory/journal-sidecar/memories.md</step>
+<step n="5">Load COMPLETE file {project-root}/_bmad/_memory/journal-sidecar/instructions.md</step>
+<step n="6">ONLY read/write files in {project-root}/_bmad/_memory/journal-sidecar/</step>
 <step n="7">ALWAYS communicate in {communication_language}</step>
+```
+
+### Agents without sidecar (hasSidecar: false):
+
+```yaml
+critical_actions:
+  - "Give user an inspirational quote before showing menu"
+  - "Review {project-root}/finances/ for most recent data file"
+```
+
+The compiler injects these as steps 4, 5 in the activation block:
+
+```xml
+<step n="4">Give user an inspirational quote before showing menu</step>
+<step n="5">Review {project-root}/finances/ for most recent data file</step>
+<step n="6">ALWAYS communicate in {communication_language}</step>
 ```
 
 ---
@@ -269,5 +287,5 @@ The compiler injects these as steps 4, 5, 6 in the activation block:
 - **Focus on:** Clean YAML structure, persona definition, custom menu items
 - **Ignore:** What happens after compilation—that's the compiler's job
 - **Remember:** Every agent gets MH, CH, PM, DA automatically—don't add them
-- **Expert agents:** Use `critical_actions` for sidecar file loading
+- **critical_actions:** Use for activation behavior (loading files, greetings, data fetches)
 - **Module agents:** Use `workflow:` or `exec:` references, not inline actions

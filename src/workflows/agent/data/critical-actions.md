@@ -14,14 +14,20 @@ Numbered steps that execute FIRST when an agent activates.
 - Startup behavior (greeting enhancement, data fetch, state init)
 - Any MUST-do activation behavior
 
-**Applies to:** BOTH Simple and Expert agents
+**Applies to:** BOTH agents with and without sidecar
 
 ---
 
-## Expert Agent Pattern
+## Agent WITH Sidecar Pattern (hasSidecar: true)
+
+Agents with sidecars use `critical_actions` to:
+1. Load sidecar memory files (memories.md, instructions.md)
+2. Set file access boundaries (restrict to sidecar folder only)
+3. Optionally write to memory during activation if needed
+4. Add any other startup behaviors specific to the agent
 
 ```yaml
-# ✅ CORRECT Expert Agent
+# ✅ CORRECT Agent with sidecar
 critical_actions:
   - 'Load COMPLETE file {project-root}/_bmad/_memory/journal-keeper-sidecar/memories.md'
   - 'Load COMPLETE file {project-root}/_bmad/_memory/journal-keeper-sidecar/instructions.md'
@@ -34,15 +40,20 @@ critical_actions:
 - Sidecar created next to agent.yaml during BUILD, then copied to `_memory/` during BMAD INSTALLATION
 - Use `{project-root}/_bmad/_memory/{sidecar-folder}/` format for RUNTIME paths in agent YAML
 
+**MANDATORY for hasSidecar: true:** At minimum 3 actions for loading memories, instructions, and restricting file access.
+
 ---
 
-## Simple Agent Pattern
+## Agent WITHOUT Sidecar Pattern (hasSidecar: false)
+
+Agents without sidecars may use `critical_actions` for other activation behaviors:
 
 ```yaml
-# ✅ CORRECT Simple Agent with activation behavior
+# ✅ CORRECT Agent without sidecar, with activation behavior
 critical_actions:
   - 'Give user an inspirational quote before showing menu'
   - 'Review {project-root}/finances/ for most recent data file'
+  - 'Fetch latest stock prices before displaying menu'
 ```
 
 **Note:** Agents without activation needs can omit `critical_actions` entirely.
@@ -53,8 +64,8 @@ critical_actions:
 
 | Type | Pattern |
 |------|---------|
-| Expert sidecar | `{project-root}/_bmad/_memory/{sidecar-folder}/file.md` |
-| Simple data | `{project-root}/finances/data.csv` |
+| Sidecar memory | `{project-root}/_bmad/_memory/{sidecar-folder}/file.md` |
+| Other data | `{project-root}/finances/data.csv` |
 | Output folders | `{output_folder}/results/` |
 
 ---
