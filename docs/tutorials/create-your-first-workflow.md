@@ -18,7 +18,7 @@ This tutorial uses the **BMad Builder (BMB)** module. Make sure you have BMad in
 
 :::note[Prerequisites]
 - BMad installed with the BMB module
-- Basic understanding of what workflows do (see [What Are Workflows](../explanation/what-are-workflows.md))
+- Basic understanding of what workflows do (see [What Are Workflows](/docs/explanation/what-are-workflows.md))
 - A multi-step process you want to automate or guide
 - About 30-45 minutes for your first workflow
 :::

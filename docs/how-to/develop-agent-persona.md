@@ -5,8 +5,8 @@ title: "Develop Agent Persona"
 Learn to craft memorable, effective agent personas using the four-field system. A well-developed persona makes your agent vivid, useful, and something users seek out by name.
 
 :::note[Prerequisites]
-- Familiarity with [Agent Schema](docs/reference/agent-schema.md)
-- Understanding of [hasSidecar](docs/explanation/what-are-bmad-agents.md) configuration
+- Familiarity with [Agent Schema](/docs/reference/agent-schema.md)
+- Understanding of [hasSidecar](/docs/explanation/what-are-bmad-agents.md) configuration
 :::
 
 ## The Four-Field System

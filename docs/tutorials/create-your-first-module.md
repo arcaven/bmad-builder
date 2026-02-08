@@ -200,8 +200,8 @@ Morgan created spec files during the build step. Now implement your agents and w
 3. **Add tools** or templates as needed
 
 For details on creating agents and workflows, see:
-- **[Create a Custom Agent](docs/tutorials/create-custom-agent.md)**
-- **[Create Your First Workflow](docs/tutorials/create-your-first-workflow.md)**
+- **[Create a Custom Agent](/docs/tutorials/create-custom-agent.md)**
+- **[Create Your First Workflow](/docs/tutorials/create-your-first-workflow.md)**
 
 ## Step 5: Validate Your Module
 

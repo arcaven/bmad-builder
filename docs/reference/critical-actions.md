@@ -5,8 +5,8 @@ title: "Critical Actions Reference"
 Critical actions are numbered steps that execute FIRST on agent activation. They enable autonomous behaviors and are essential for agents with sidecars.
 
 :::note[Prerequisites]
-- Understanding of [hasSidecar](docs/explanation/what-are-bmad-agents.md) configuration
-- Familiarity with [Agent Schema](docs/reference/agent-schema.md)
+- Understanding of [hasSidecar](/docs/explanation/what-are-bmad-agents.md) configuration
+- Familiarity with [Agent Schema](/docs/reference/agent-schema.md)
 :::
 
 ## Quick Reference
