@@ -1,13 +1,21 @@
 ---
 title: Welcome
-description: BMad Builder - Tool for creating custom BMad agents and modules
+description: BMad Builder - Build AI agents, workflows, and modules
 ---
 
 # BMad Builder
 
-**Whimsy-powered toolkit for building AI agents, workflows, and modules that actually work together.**
+**Build impossible things.** AI agents that remember you. Workflows that think. Modules that make you money.
 
-Build anything: a therapist who remembers your breakthroughs, a tax workflow that finds deductions TurboTax misses, a fitness coach that evolves with you, or tools to manage your life, business, and creativity. **Workflows are the SaaS of the future — build them, use them, sell them.**
+---
+
+You've never used a builder like this. Not even close.
+
+Skills? Plugins? They're isolated, forgettable, dead the moment you install them. BMad is **alive** — a living ecosystem where agents know what you need before you do, workflows build on each other, and everything actually works together.
+
+Build a therapist who remembers your breakthroughs six months later. A tax workflow that finds deductions TurboTax was too scared to mention. A fitness coach that evolves with every single workout. Then put it in a module and sell it.
+
+**Workflows are the SaaS of the future. You're the architect now.**
 
 ---
 
@@ -15,68 +23,73 @@ Build anything: a therapist who remembers your breakthroughs, a tax workflow tha
 
 | Section | Purpose |
 | ------- | ------- |
-| **[Tutorials](tutorials/)** | Step-by-step learning guides |
-| **[How-To Guides](how-to/)** | Practical guides for specific tasks |
-| **[Explanation](explanation/)** | Learn how BMad Builder works |
-| **[Reference](reference/)** | Technical reference and schemas |
+| **[Tutorials](tutorials/)** | Start building in 15 minutes |
+| **[How-To Guides](how-to/)** | Master specific techniques |
+| **[Explanation](explanation/)** | Under the hood |
+| **[Reference](reference/)** | Technical specs |
 
-## Getting Started
+## Start Here
 
-| Tutorial | Description | Time |
-|----------|-------------|------|
-| **[Create a Custom Agent](docs/tutorials/create-custom-agent.md)** | Build your first AI agent | 15-30 min |
-| **[Create Your First Workflow](docs/tutorials/create-your-first-workflow.md)** | Design structured workflows | 30-45 min |
-| **[Create Your First Module](docs/tutorials/create-your-first-module.md)** | Package and publish modules | 45-60 min |
+| Tutorial | What You'll Build | Time |
+|----------|-------------------|------|
+| **[Create a Custom Agent](docs/tutorials/create-custom-agent.md)** | Your first AI persona with memory | 15-30 min |
+| **[Create Your First Workflow](docs/tutorials/create-your-first-workflow.md)** | A process that thinks through problems with you | 30-45 min |
+| **[Create Your First Module](docs/tutorials/create-your-first-module.md)** | Package it up, share it, or sell it | 45-60 min |
 
-## What You Can Build
+## What You're Actually Building
 
-**Nothing else works like this.** Unlike skills or plugins that live in isolation, BMad modules form an intelligent ecosystem — agents know what to suggest next, workflows build on each other, and everything integrates into a help system that anticipates your needs.
+This isn't just for developers. This is for anyone who's ever thought "there should be a tool that does this" — and then realized **they can build it.**
 
-| Type | Builder | What It Does |
-|------|---------|--------------|
-| **Agents** | Bond | AI personas with memory, expertise, and personality |
-| **Workflows** | Wendy | Structured processes that guide you step-by-step |
-| **Modules** | Morgan | Packaged ecosystems ready to share or sell |
+| Type | Builder | What It Actually Does |
+|------|---------|------------------------|
+| **Agents** | Bond | AI personas with memory, expertise, and actual personality |
+| **Workflows** | Wendy | Structured processes that guide you through complex shit step-by-step |
+| **Modules** | Morgan | Entire ecosystems you can share with the world (or sell) |
 
-## Your Imagination Is The Limit
+**The secret sauce:** Unlike plugins that die in isolation, BMad modules form an intelligent network. Agents know when to suggest workflows. Workflows call the right agents automatically. The help system knows what you're trying to do before you do.
 
-**BMad isn't just for software.** Build modules for ANY domain:
+## Build Anything (Seriously)
 
-| Domain | Example Module | What It Does |
-|--------|---------------|--------------|
-| **Personal Growth** | Therapist Agent | An AI companion that remembers your journey and tracks emotional patterns over time |
-| **Legal** | Legal Office Module | Complete practice: documents, research, client workflows |
-| **Creative Writing** | Story Architect Module | Character development, plot outlining, dialogue coaching |
-| **Finance** | Tax Workflow Module | Find deductions TurboTax misses and create audit-proof documentation |
-| **Education** | Personal Tutor Module | Adaptive learning that remembers your progress and learning style |
-| **Health** | Fitness Coach Module | Custom workouts and nutrition plans that evolve with you |
-| **Music** | Songwriter's Assistant | Generate lyrics, suggest chord progressions, arrange songs |
-| **Cooking** | Personal Chef Module | Recipe suggestions based on ingredients you have, meal planning |
-| **Travel** | Trip Planner Module | Custom itineraries, local recommendations, budget optimization |
-| **Parenting** | Family Coordinator Module | Activity ideas, milestone tracking, scheduling support |
-| **Hobbies** | D&D Campaign Module | Character creation, world-building, encounter design, story tracking |
-| **Spirituality** | Meditation Guide Module | Personalized sessions, progress tracking, technique recommendations |
-| **Sports** | Coach Module | Training plans, strategy development, performance analysis |
-| **Gardening** | Garden Planner Module | Crop selection, planting schedules, pest control, harvest tracking |
+**BMad isn't just for software.** Build modules for literally any domain:
 
-**From therapeutic agents that remember your deepest dreams to tax workflows that find deductions TurboTax misses — if you can dream it, you can build it.**
+| Domain | Example | What It Actually Does |
+|--------|---------|------------------------|
+| **Mental Health** | Therapist Agent | Remembers your patterns, notices what you don't, celebrates breakthroughs you forgot |
+| **Money** | Tax Workflow Module | Finds deductions TurboTax was too cowardly to mention, creates bulletproof documentation |
+| **Creative** | Story Architect Module | Character arcs, plot holes, dialogue that doesn't sound like a robot |
+| **Learning** | Personal Tutor Module | Remembers how YOUR brain works, adapts accordingly |
+| **Fitness** | Coach Module | Reads your progress, evolves your plan, actually gives a shit |
+| **Music** | Songwriter's Assistant | Lyrics, chords, arrangements — remembers your style |
+| **Cooking** | Personal Chef Module | "What can I actually make with this?" — answered forever |
+| **Travel** | Trip Planner Module | Local secrets, budget optimization, schedules that don't suck |
+| **Parenting** | Family Coordinator | Activity ideas, milestone tracking, sanity preservation |
+| **Gaming** | D&D Campaign Module | Characters that matter, worlds that breathe, stories that remember |
+| **Spirituality** | Meditation Guide | Sessions that adapt to your actual progress |
+| **Sports** | Coach Module | Training plans that evolve, strategy that learns |
+| **Gardening** | Garden Planner | Crop selection, pest control, harvest tracking |
 
-:::tip[The Marketplace Is Coming]
-Soon you'll be able to publish your modules to the BMad marketplace — share your creations or sell them to the world. **Your workflow could be someone's next favorite tool.**
-:::
+**From agents that remember your deepest dreams to workflows that find money you didn't know existed — if you can imagine it, you can build it.**
+
+## The Marketplace Is Coming
+
+Build something incredible? Soon you'll be able to publish to the BMad marketplace.
+
+**Your workflow could be someone's favorite tool. Your module could fund your life.**
+
+This isn't hypothetical. People are already building tools that solve real problems in ways no SaaS company ever would — because they're building **their** solutions, not some product manager's idea of what they need.
 
 ## The Three Builders
 
-| Agent | Commands | Expertise |
+| Agent | Commands | They Build |
 |-------|----------|-----------|
-| **Bond** | `[CA]`, `[EA]`, `[VA]` | Agent architecture and persona development |
-| **Wendy** | `[CW]`, `[EW]`, `[VW]`, `[MV]`, `[RW]` | Process design and step architecture |
-| **Morgan** | `[PB]`, `[CM]`, `[EM]`, `[VM]` | Full-stack systems design |
+| **Bond** | `[CA]`, `[EA]`, `[VA]` | Agents with personality, memory, and expertise |
+| **Wendy** | `[CW]`, `[EW]`, `[VW]`, `[MV]`, `[RW]` | Workflows that think through problems with you |
+| **Morgan** | `[PB]`, `[CM]`, `[EM]`, `[VM]` | Entire modules ready to ship |
 
 ---
 
 ## Community
 
-- **[Discord](https://discord.gg/gk8jAdXWmj)** — Get help and share your creations
-- **[GitHub](https://github.com/bmad-code-org/bmad-builder)** — Source code and contributions
-- **[BMad Method Docs](https://docs.bmad-method.org)** — Core framework documentation
+- **[Discord](https://discord.gg/gk8jAdXWmj)** — Show off what you built, get unstuck, find collaborators
+- **[GitHub](https://github.com/bmad-code-org/bmad-builder)** — Source code, contributions, star the repo if you're feeling generous
+- **[BMad Method Docs](https://docs.bmad-method.org)** — The core framework that makes this all possible
