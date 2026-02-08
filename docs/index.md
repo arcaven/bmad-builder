@@ -5,9 +5,11 @@ description: BMad Builder - Tool for creating custom BMad agents and modules
 
 # BMad Builder
 
-Tool for creating custom BMad agents, workflows, and modules.
+**Whimsy-powered toolkit for building AI agents, workflows, and modules that actually work together.**
 
-If you're comfortable working with AI coding assistants like Claude, Cursor, or GitHub Copilot, you're ready to get started.
+Build anything: a therapist who remembers your breakthroughs, a tax workflow that finds deductions TurboTax misses, a fitness coach that evolves with you, or tools to manage your life, business, and creativity. **Workflows are the SaaS of the future — and you can build, use, and even sell them.**
+
+If you're comfortable working with AI coding assistants like Claude, Cursor, or GitHub Copilot, you're ready to build the impossible.
 
 ---
 
@@ -30,11 +32,13 @@ If you're comfortable working with AI coding assistants like Claude, Cursor, or 
 
 ## What You Can Build
 
-| Type | Builder | Description |
-|------|---------|-------------|
-| **Agents** | Bond | Domain experts with specialized knowledge and tools |
-| **Workflows** | Wendy | Structured processes with steps and decision points |
-| **Modules** | Morgan | Packaged agents + workflows ready to share |
+**Nothing else works like this.** Unlike skills or plugins that live in isolation, BMad modules form an intelligent ecosystem — agents know what to suggest next, workflows build on each other, and everything integrates into a help system that anticipates your needs.
+
+| Type | Builder | What It Does |
+|------|---------|--------------|
+| **Agents** | Bond | AI personas with memory, expertise, and personality |
+| **Workflows** | Wendy | Structured processes that guide you step-by-step |
+| **Modules** | Morgan | Packaged ecosystems ready to share or sell |
 
 ## Your Imagination Is The Limit
 
@@ -60,7 +64,7 @@ If you're comfortable working with AI coding assistants like Claude, Cursor, or 
 **From therapeutic agents that remember your deepest dreams to tax workflows that find deductions TurboTax misses — if you can dream it, you can build it.**
 
 :::tip[The Marketplace Is Coming]
-Soon you'll be able to publish your modules to the BMad marketplace — where others can discover and benefit from your creations.
+Soon you'll be able to publish your modules to the BMad marketplace — share your creations or sell them to the world. **Your workflow could be someone's next favorite tool.**
 :::
 
 ## The Three Builders
