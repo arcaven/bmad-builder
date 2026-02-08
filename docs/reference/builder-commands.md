@@ -193,10 +193,10 @@ Validates a module.
 
 **Checks:**
 - `module.yaml` validity
+- `module-help.csv` format (if present)
 - Folder structure
 - Agent file compliance
 - Workflow file compliance
-- `package.json` configuration
 
 ## Command Quick Reference
 

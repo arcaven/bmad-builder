@@ -13,7 +13,7 @@ This tutorial uses the **BMad Builder (BMB)** module. Make sure you have BMad in
 - What a BMad module is and what it contains
 - How to create a module brief with Morgan (module-builder)
 - How to build a complete module from your brief
-- How to configure module.yaml and package.json
+- How to configure module.yaml and module-help.csv
 - How to publish your module to npm
 
 :::note[Prerequisites]
@@ -39,11 +39,16 @@ Every BMad module follows a standard structure:
 your-module/
 ├── src/
 │   ├── module.yaml          # Module metadata and install config
+│   ├── module-help.csv      # Feature registry for BMad help system
 │   ├── agents/              # Agent definitions (.agent.yaml)
 │   ├── workflows/           # Workflow files
 │   └── tools/               # Small reusable tools
-├── package.json             # NPM package info
 ├── README.md                # Module documentation
+```
+
+For npm publishing, add:
+```
+├── package.json             # NPM package info (for publishing only)
 └── .npmignore               # Excludes dev files from npm package
 ```
 
@@ -52,10 +57,11 @@ your-module/
 | Component | Purpose | Required |
 |-----------|---------|----------|
 | **module.yaml** | Metadata, install questions, config | ✅ Yes |
-| **package.json** | NPM publishing, version info | ✅ Yes |
+| **module-help.csv** | Feature registry for BMad help system | ⭐ Highly suggested |
 | **Agents** | AI assistants with specific roles | ⚪ Optional |
 | **Workflows** | Step-by-step processes | ⚪ Optional |
 | **Tools** | Reusable prompt files | ⚪ Optional |
+| **package.json** | NPM publishing, version info | 📦 For publishing only |
 
 ## Why Build Modules?
 
@@ -177,9 +183,26 @@ config:
   # Add your config keys here
 ```
 
-### package.json
+### module-help.csv (Optional but Powerful)
 
-Configure `package.json` for npm publishing:
+The `module-help.csv` file registers your module's agents and workflows with BMad's intelligent help system. This enables contextual recommendations and smart workflow chaining.
+
+:::tip[Why module-help.csv Matters]
+The BMad help system uses this file to suggest the right workflows at the right time. Without it, your module's features remain hidden. With it, they become part of the intelligent BMad ecosystem.
+:::
+
+```csv
+module,phase,name,code,sequence,workflow-file,command,required,agent,options,description,output-location,outputs
+your-module,discovery,"Your Workflow Name",your-workflow,10,workflows/your-workflow/workflow.md,your-workflow,false,workflow-builder,,"Brief description of what this workflow does",_your-module-output/,
+```
+
+:::note[Future Changes]
+In a future release, `module-help.csv` will be auto-generated from workflow and agent metadata. For now, it's the manual way to tap into the power of the BMad help system.
+:::
+
+### package.json (For npm Publishing Only)
+
+If you plan to publish your module to npm, create `package.json`:
 
 ```json
 {
@@ -194,6 +217,10 @@ Configure `package.json` for npm publishing:
 
 :::note[Package Naming]
 Use scoped naming (`@username/module-name` or `@bmad-code-org/` for official modules).
+:::
+
+:::note[Local Modules Don't Need package.json]
+If you're only using your module locally or sharing it directly (folder, git repo), you can skip `package.json` entirely. It's only required for npm publishing.
 :::
 
 ## Step 4: Implement Your Agents and Workflows
@@ -218,9 +245,10 @@ Before publishing, validate your module:
 
 Morgan checks:
 - `module.yaml` is complete and valid
+- `module-help.csv` is properly formatted (if present)
 - Agent files follow BMad standards
 - Workflows have proper structure
-- Package.json is configured correctly
+- Folder structure is correct
 
 Fix any issues Morgan identifies, then re-validate.
 

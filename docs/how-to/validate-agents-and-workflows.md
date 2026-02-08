@@ -174,10 +174,10 @@ Use Morgan's validation workflow:
 | Category | Checks |
 |----------|--------|
 | **module.yaml** | Metadata, install questions, config valid |
+| **module-help.csv** | Proper CSV format and required columns (if present) |
 | **Structure** | Agents, workflows, tools folders present |
 | **Agents** | All agent files valid |
 | **Workflows** | All workflow files valid |
-| **Package** | package.json configured correctly |
 
 ## Common Validation Issues
 

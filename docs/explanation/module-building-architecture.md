@@ -58,16 +58,21 @@ The brief is exploratory and creative. You're discovering what your module shoul
 your-module/
 ├── src/
 │   ├── module.yaml              # Module metadata and config
-│   ├── module-help.csv          # Feature registry (auto-generated)
+│   ├── module-help.csv          # Feature registry (optional but powerful)
 │   ├── agents/                  # Agent directory
 │   │   └── your-agent.agent.yaml  # Agent SPEC files (stubs)
 │   ├── workflows/               # Workflow directory
 │   │   └── your-workflow/        # Workflow SPEC files (stubs)
 │   │       └── workflow.md
 │   └── _module-installer/       # Custom install prompts (if needed)
-├── package.json                  # NPM package config
 ├── README.md                     # Documentation template
 └── TODO.md                       # Implementation checklist
+```
+
+For npm publishing, add:
+```
+├── package.json                  # NPM package config (publishing only)
+└── .npmignore                    # Excludes dev files from npm package
 ```
 
 **What these SPEC files contain:**
@@ -157,9 +162,14 @@ wedding-planner/
 │   │   │   └── workflow.md                    # SPEC
 │   │   └── day-of-schedule/
 │   │       └── workflow.md                    # SPEC
-├── package.json
 ├── README.md
 └── TODO.md
+```
+
+For npm publishing, add:
+```
+├── package.json
+└── .npmignore
 ```
 
 **What the SPEC files contain:**
@@ -239,7 +249,7 @@ After Phase 3, your module is complete and functional:
 wedding-planner/
 ├── src/
 │   ├── module.yaml                          # ✅ Complete
-│   ├── module-help.csv                      # ✅ Complete
+│   ├── module-help.csv                      # ✅ Complete (optional but powerful)
 │   ├── agents/
 │   │   ├── budget-specialist.agent.yaml     # ✅ Built by Bond
 │   │   ├── vendor-coordinator.agent.yaml    # ✅ Built by Bond
@@ -248,9 +258,14 @@ wedding-planner/
 │   │   ├── budget-workshop/                 # ✅ Built by Wendy
 │   │   ├── vendor-vetting/                  # ✅ Built by Wendy
 │   │   └── day-of-schedule/                 # ✅ Built by Wendy
-├── package.json                             # ✅ Complete
 ├── README.md                                # ✅ Complete
 └── TODO.md                                  # ✅ All items checked
+```
+
+For npm publishing, add:
+```
+├── package.json                             # For npm distribution
+└── .npmignore
 ```
 
 ## Why This Architecture Works
