@@ -421,5 +421,5 @@ Consider:
 
 | Resource | Description |
 |----------|-------------|
-| [Develop Agent Persona](/docs/how-to/develop-agent-persona.md) | Full persona development guide |
-| [Agent Schema](/docs/reference/agent-schema.md) | Complete field reference |
+| [Develop Agent Persona](/how-to/develop-agent-persona.md) | Full persona development guide |
+| [Agent Schema](/reference/agent-schema.md) | Complete field reference |

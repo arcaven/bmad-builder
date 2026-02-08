@@ -5,8 +5,8 @@ title: "Critical Actions Reference"
 Critical actions are numbered steps that execute FIRST on agent activation. They enable autonomous behaviors and are essential for agents with sidecars.
 
 :::note[Prerequisites]
-- Understanding of [hasSidecar](/docs/explanation/what-are-bmad-agents.md) configuration
-- Familiarity with [Agent Schema](/docs/reference/agent-schema.md)
+- Understanding of [hasSidecar](/explanation/what-are-bmad-agents.md) configuration
+- Familiarity with [Agent Schema](/reference/agent-schema.md)
 :::
 
 ## Quick Reference
@@ -251,7 +251,7 @@ No, they only run once when the agent is first activated.
 
 | Resource | Description |
 |----------|-------------|
-| [Agent Schema](/docs/reference/agent-schema.md) | Complete agent structure |
-| [Design Agent Menus](/docs/how-to/design-agent-menus.md) | Menu system design |
-| [What Are Agents](/docs/explanation/what-are-bmad-agents.md) | Agent architecture |
+| [Agent Schema](/reference/agent-schema.md) | Complete agent structure |
+| [Design Agent Menus](/how-to/design-agent-menus.md) | Menu system design |
+| [What Are Agents](/explanation/what-are-bmad-agents.md) | Agent architecture |
 | [Agent Compilation](https://github.com/bmad-code-org/bmad-builder/tree/main/src/workflows/agent/data/agent-compilation.md) | How YAML becomes compiled agents |

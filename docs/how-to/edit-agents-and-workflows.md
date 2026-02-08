@@ -274,7 +274,7 @@ menu:
 
 | Guide | Description |
 |-------|-------------|
-| [Validate Agents and Workflows](/docs/how-to/validate-agents-and-workflows.md) | Quality assurance |
-| [Create a Custom Agent](/docs/tutorials/create-custom-agent.md) | Creating agents |
-| [Create Your First Workflow](/docs/tutorials/create-your-first-workflow.md) | Creating workflows |
-| [Workflow Customization](/docs/explanation/customize-workflows.md) | Tri-modal structure and patterns |
+| [Validate Agents and Workflows](/how-to/validate-agents-and-workflows.md) | Quality assurance |
+| [Create a Custom Agent](/tutorials/create-custom-agent.md) | Creating agents |
+| [Create Your First Workflow](/tutorials/create-your-first-workflow.md) | Creating workflows |
+| [Workflow Customization](/explanation/customize-workflows.md) | Tri-modal structure and patterns |

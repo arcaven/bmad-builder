@@ -370,6 +370,6 @@ agent:
 
 | Resource | Description |
 |----------|-------------|
-| [Builder Commands](/docs/reference/builder-commands.md) | Agent creation commands |
-| [Create a Custom Agent](/docs/tutorials/create-custom-agent.md) | Agent creation tutorial |
-| [What Are Agents](/docs/explanation/what-are-bmad-agents.md) | Agent architecture explanation |
+| [Builder Commands](/reference/builder-commands.md) | Agent creation commands |
+| [Create a Custom Agent](/tutorials/create-custom-agent.md) | Agent creation tutorial |
+| [What Are Agents](/explanation/what-are-bmad-agents.md) | Agent architecture explanation |

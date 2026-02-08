@@ -217,6 +217,6 @@ Validates a module.
 
 | Resource | Description |
 |----------|-------------|
-| [Agent Schema](/docs/reference/agent-schema.md) | Agent YAML structure |
-| [Workflow Schema](/docs/reference/workflow-schema.md) | Workflow frontmatter and structure |
-| [Module YAML](/docs/reference/module-yaml.md) | Module configuration |
+| [Agent Schema](/reference/agent-schema.md) | Agent YAML structure |
+| [Workflow Schema](/reference/workflow-schema.md) | Workflow frontmatter and structure |
+| [Module YAML](/reference/module-yaml.md) | Module configuration |

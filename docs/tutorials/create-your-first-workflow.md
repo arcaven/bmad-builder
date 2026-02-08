@@ -18,7 +18,7 @@ This tutorial uses the **BMad Builder (BMB)** module. Make sure you have BMad in
 
 :::note[Prerequisites]
 - BMad installed with the BMB module
-- Basic understanding of what workflows do (see [What Are Workflows](/docs/explanation/what-are-workflows.md))
+- Basic understanding of what workflows do (see [What Are Workflows](/explanation/what-are-workflows.md))
 - A multi-step process you want to automate or guide
 - About 30-45 minutes for your first workflow
 :::
@@ -295,10 +295,10 @@ Templates are optional but recommended when your workflow produces a structured 
 
 | Resource | Description |
 |----------|-------------|
-| [What Are Workflows](/docs/explanation/what-are-workflows.md) | Deep technical details on workflow architecture |
-| [Workflow Patterns](/docs/explanation/workflow-patterns.md) | Step types and structure patterns |
-| [Edit Agents and Workflows](/docs/how-to/edit-agents-and-workflows.md) | Modify existing workflows |
-| [Workflow Schema](/docs/reference/workflow-schema.md) | Technical reference for workflow configuration |
+| [What Are Workflows](/explanation/what-are-workflows.md) | Deep technical details on workflow architecture |
+| [Workflow Patterns](/explanation/workflow-patterns.md) | Step types and structure patterns |
+| [Edit Agents and Workflows](/how-to/edit-agents-and-workflows.md) | Modify existing workflows |
+| [Workflow Schema](/reference/workflow-schema.md) | Technical reference for workflow configuration |
 
 :::tip[Key Takeaways]
 - **Start simple** — Your first workflow should solve one problem well with 3-5 steps

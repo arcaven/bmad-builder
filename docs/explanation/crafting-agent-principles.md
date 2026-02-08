@@ -192,6 +192,6 @@ persona:
 
 | Resource | Description |
 |----------|-------------|
-| [Develop Agent Persona](/docs/how-to/develop-agent-persona.md) | Full four-field persona system |
-| [Agent Schema](/docs/reference/agent-schema.md) | Complete field reference |
+| [Develop Agent Persona](/how-to/develop-agent-persona.md) | Full four-field persona system |
+| [Agent Schema](/reference/agent-schema.md) | Complete field reference |
 | [Brainstorming Agent Context](https://github.com/bmad-code-org/bmad-builder/tree/main/src/workflows/agent/data/brainstorm-context.md) | Framework for creating memorable agents |

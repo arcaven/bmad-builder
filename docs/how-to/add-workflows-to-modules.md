@@ -281,10 +281,10 @@ Install your module locally and invoke the workflow. Use the validate workflow c
 
 | Resource | Description |
 |----------|-------------|
-| [Module Help CSV](/docs/reference/module-help-csv.md) | Complete CSV field reference |
-| [Workflow Patterns](/docs/explanation/workflow-patterns.md) | Choosing the right structure |
-| [What Are Workflows](/docs/explanation/what-are-workflows.md) | Workflow concepts |
-| [Workflow Schema](/docs/reference/workflow-schema.md) | Technical workflow structure |
+| [Module Help CSV](/reference/module-help-csv.md) | Complete CSV field reference |
+| [Workflow Patterns](/explanation/workflow-patterns.md) | Choosing the right structure |
+| [What Are Workflows](/explanation/what-are-workflows.md) | Workflow concepts |
+| [Workflow Schema](/reference/workflow-schema.md) | Technical workflow structure |
 
 :::tip[Key Takeaway]
 Adding workflows to existing modules is about thoughtful integration. Get the phase and sequence right in `module-help.csv`, write a clear description that explains when to use your workflow, and ensure your workflow folder structure follows BMad conventions.

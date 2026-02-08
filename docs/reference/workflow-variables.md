@@ -282,6 +282,6 @@ Variables resolve in this order:
 
 | Resource | Description |
 |----------|-------------|
-| [Workflow Schema](/docs/reference/workflow-schema.md) | Complete workflow structure reference |
+| [Workflow Schema](/reference/workflow-schema.md) | Complete workflow structure reference |
 | [Frontmatter Standards](https://github.com/bmad-code-org/bmad-builder/blob/main/src/workflows/workflow/data/frontmatter-standards.md) | Source documentation |
 | [Menu Handling Standards](https://github.com/bmad-code-org/bmad-builder/blob/main/src/workflows/workflow/data/menu-handling-standards.md) | Menu patterns |

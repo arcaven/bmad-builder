@@ -5,8 +5,8 @@ title: "Design Agent Menus"
 Learn to design effective agent menus that provide intuitive access to your agent's capabilities. Well-designed menus make agents discoverable, efficient, and delightful to use.
 
 :::note[Prerequisites]
-- Familiarity with [Agent Schema](/docs/reference/agent-schema.md)
-- Understanding of [hasSidecar](/docs/explanation/what-are-bmad-agents.md) configuration
+- Familiarity with [Agent Schema](/reference/agent-schema.md)
+- Understanding of [hasSidecar](/explanation/what-are-bmad-agents.md) configuration
 :::
 
 ## Menu Item Schema
@@ -343,6 +343,6 @@ Yes, but be aware that users may have memorized them. Document breaking changes.
 
 | Resource | Description |
 |----------|-------------|
-| [Agent Schema](/docs/reference/agent-schema.md) | Complete menu schema |
-| [Critical Actions](/docs/reference/critical-actions.md) | Activation behavior |
-| [What Are Agents](/docs/explanation/what-are-bmad-agents.md) | Agent architecture |
+| [Agent Schema](/reference/agent-schema.md) | Complete menu schema |
+| [Critical Actions](/reference/critical-actions.md) | Activation behavior |
+| [What Are Agents](/explanation/what-are-bmad-agents.md) | Agent architecture |

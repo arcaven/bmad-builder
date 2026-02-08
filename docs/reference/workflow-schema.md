@@ -281,7 +281,7 @@ When validating workflows, check:
 
 | Resource | Description |
 |----------|-------------|
-| [Builder Commands](/docs/reference/builder-commands.md) | Workflow commands |
-| [Workflow Variables](/docs/reference/workflow-variables.md) | Complete variable reference |
-| [Create Your First Workflow](/docs/tutorials/create-your-first-workflow.md) | Workflow creation tutorial |
-| [What Are Workflows](/docs/explanation/what-are-workflows.md) | Workflow concepts |
+| [Builder Commands](/reference/builder-commands.md) | Workflow commands |
+| [Workflow Variables](/reference/workflow-variables.md) | Complete variable reference |
+| [Create Your First Workflow](/tutorials/create-your-first-workflow.md) | Workflow creation tutorial |
+| [What Are Workflows](/explanation/what-are-workflows.md) | Workflow concepts |

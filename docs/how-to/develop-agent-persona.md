@@ -5,8 +5,8 @@ title: "Develop Agent Persona"
 Learn to craft memorable, effective agent personas using the four-field system. A well-developed persona makes your agent vivid, useful, and something users seek out by name.
 
 :::note[Prerequisites]
-- Familiarity with [Agent Schema](/docs/reference/agent-schema.md)
-- Understanding of [hasSidecar](/docs/explanation/what-are-bmad-agents.md) configuration
+- Familiarity with [Agent Schema](/reference/agent-schema.md)
+- Understanding of [hasSidecar](/explanation/what-are-bmad-agents.md) configuration
 :::
 
 ## The Four-Field System
@@ -319,7 +319,7 @@ agent:
 
 | Resource | Description |
 |----------|-------------|
-| [Crafting Agent Principles](/docs/explanation/crafting-agent-principles.md) | Deep dive on writing effective principles |
-| [Communication Styles](/docs/reference/communication-styles.md) | 62 pre-defined communication style presets |
-| [Agent Schema](/docs/reference/agent-schema.md) | Complete field reference |
+| [Crafting Agent Principles](/explanation/crafting-agent-principles.md) | Deep dive on writing effective principles |
+| [Communication Styles](/reference/communication-styles.md) | 62 pre-defined communication style presets |
+| [Agent Schema](/reference/agent-schema.md) | Complete field reference |
 | [Brainstorming Agent Context](https://github.com/bmad-code-org/bmad-builder/tree/main/src/workflows/agent/data/brainstorm-context.md) | Framework for creating memorable agents |

@@ -21,18 +21,18 @@ Build a therapist who remembers your breakthroughs six months later. A tax workf
 
 | Section | Purpose |
 | ------- | ------- |
-| **[Tutorials](/docs/tutorials/)** | Start building in 15 minutes |
-| **[How-To Guides](/docs/how-to/)** | Master specific techniques |
-| **[Explanation](/docs/explanation/)** | Under the hood |
-| **[Reference](/docs/reference/)** | Technical specs |
+| **[Tutorials](/tutorials/)** | Start building in 15 minutes |
+| **[How-To Guides](/how-to/)** | Master specific techniques |
+| **[Explanation](/explanation/)** | Under the hood |
+| **[Reference](/reference/)** | Technical specs |
 
 ## Start Here
 
 | Tutorial | What You'll Build | Time |
 |----------|-------------------|------|
-| **[Create a Custom Agent](/docs/tutorials/create-custom-agent.md)** | Your first AI persona with memory | 15-30 min |
-| **[Create Your First Workflow](/docs/tutorials/create-your-first-workflow.md)** | A process that thinks through problems with you | 30-45 min |
-| **[Create Your First Module](/docs/tutorials/create-your-first-module.md)** | Package it up, share it, or sell it | 45-60 min |
+| **[Create a Custom Agent](/tutorials/create-custom-agent.md)** | Your first AI persona with memory | 15-30 min |
+| **[Create Your First Workflow](/tutorials/create-your-first-workflow.md)** | A process that thinks through problems with you | 30-45 min |
+| **[Create Your First Module](/tutorials/create-your-first-module.md)** | Package it up, share it, or sell it | 45-60 min |
 
 ## What You're Actually Building
 

@@ -272,6 +272,6 @@ START: Creating a workflow
 
 | Resource | Description |
 |----------|-------------|
-| [What Are Workflows](/docs/explanation/what-are-workflows.md) | Workflow concepts and architecture |
-| [Workflow Customization](/docs/explanation/customize-workflows.md) | Tri-modal structure and modification |
-| [Workflow Schema](/docs/reference/workflow-schema.md) | Technical reference
+| [What Are Workflows](/explanation/what-are-workflows.md) | Workflow concepts and architecture |
+| [Workflow Customization](/explanation/customize-workflows.md) | Tri-modal structure and modification |
+| [Workflow Schema](/reference/workflow-schema.md) | Technical reference

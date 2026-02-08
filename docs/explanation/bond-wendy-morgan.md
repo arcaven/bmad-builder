@@ -165,14 +165,14 @@ Start with the builder that matches your goal:
 
 | Builder | Tutorial |
 |---------|----------|
-| **Bond** | [Create a Custom Agent](/docs/tutorials/create-custom-agent.md) |
-| **Wendy** | [Create Your First Workflow](/docs/tutorials/create-your-first-workflow.md) |
-| **Morgan** | [Create Your First Module](/docs/tutorials/create-your-first-module.md) |
+| **Bond** | [Create a Custom Agent](/tutorials/create-custom-agent.md) |
+| **Wendy** | [Create Your First Workflow](/tutorials/create-your-first-workflow.md) |
+| **Morgan** | [Create Your First Module](/tutorials/create-your-first-module.md) |
 
 ## Resources
 
 | Resource | Description |
 |----------|-------------|
-| [Builder Commands](/docs/reference/builder-commands.md) | All builder commands |
-| [What Are Agents](/docs/explanation/what-are-bmad-agents.md) | Understanding agents |
-| [What Are Workflows](/docs/explanation/what-are-workflows.md) | Understanding workflows |
+| [Builder Commands](/reference/builder-commands.md) | All builder commands |
+| [What Are Agents](/explanation/what-are-bmad-agents.md) | Understanding agents |
+| [What Are Workflows](/explanation/what-are-workflows.md) | Understanding workflows |

@@ -202,6 +202,6 @@ For free-form workflows, include a polish step that:
 
 | Resource | Description |
 |----------|-------------|
-| [Workflow Patterns](/docs/explanation/workflow-patterns.md) | Step types and structure patterns |
-| [Workflow Schema](/docs/reference/workflow-schema.md) | Technical reference |
-| [Edit Agents and Workflows](/docs/how-to/edit-agents-and-workflows.md) | Step-by-step editing guide |
+| [Workflow Patterns](/explanation/workflow-patterns.md) | Step types and structure patterns |
+| [Workflow Schema](/reference/workflow-schema.md) | Technical reference |
+| [Edit Agents and Workflows](/how-to/edit-agents-and-workflows.md) | Step-by-step editing guide |

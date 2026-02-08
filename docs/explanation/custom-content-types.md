@@ -29,7 +29,7 @@ BMad supports three types of custom modules, plus standalone agents and workflow
 
 Custom modules range from simple collections of related agents, workflows, and tools to complex systems like the BMad Method or even larger applications.
 
-Custom modules are [installable](/docs/how-to/install-custom-modules.md) using the standard BMad method and support advanced features:
+Custom modules are [installable](/how-to/install-custom-modules.md) using the standard BMad method and support advanced features:
 
 - Optional user information collection during installation and updates
 - Versioning and upgrade paths

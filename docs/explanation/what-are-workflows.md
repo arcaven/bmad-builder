@@ -144,8 +144,8 @@ Before building, decide:
 
 | Resource | Description |
 |----------|-------------|
-| [Workflow Patterns](/docs/explanation/workflow-patterns.md) | Structure types and when to use them |
-| [Create Your First Workflow](/docs/tutorials/create-your-first-workflow.md) | Step-by-step tutorial |
-| [Workflow Schema](/docs/reference/workflow-schema.md) | Technical reference |
-| [Edit Agents and Workflows](/docs/how-to/edit-agents-and-workflows.md) | Modifying workflows |
-| [Workflow Variables](/docs/reference/workflow-variables.md) | Frontmatter reference
+| [Workflow Patterns](/explanation/workflow-patterns.md) | Structure types and when to use them |
+| [Create Your First Workflow](/tutorials/create-your-first-workflow.md) | Step-by-step tutorial |
+| [Workflow Schema](/reference/workflow-schema.md) | Technical reference |
+| [Edit Agents and Workflows](/how-to/edit-agents-and-workflows.md) | Modifying workflows |
+| [Workflow Variables](/reference/workflow-variables.md) | Frontmatter reference

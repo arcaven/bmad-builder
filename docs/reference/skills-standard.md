@@ -303,7 +303,7 @@ BMad variables work in Skills. Ensure they are defined in the environment or doc
 
 | Resource | Description |
 |----------|-------------|
-| [Workflow Schema](/docs/reference/workflow-schema.md) | BMad workflow structure reference |
-| [Workflow Variables](/docs/reference/workflow-variables.md) | Variable reference for Skills |
-| [What Are Workflows](/docs/explanation/what-are-workflows.md) | Workflow concepts in BMad |
-| [Add Workflows to Modules](/docs/how-to/add-workflows-to-modules.md) | Packaging workflows for distribution
+| [Workflow Schema](/reference/workflow-schema.md) | BMad workflow structure reference |
+| [Workflow Variables](/reference/workflow-variables.md) | Variable reference for Skills |
+| [What Are Workflows](/explanation/what-are-workflows.md) | Workflow concepts in BMad |
+| [Add Workflows to Modules](/how-to/add-workflows-to-modules.md) | Packaging workflows for distribution

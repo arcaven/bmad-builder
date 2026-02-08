@@ -114,6 +114,6 @@ When validating modules, Morgan checks:
 
 | Resource | Description |
 |----------|-------------|
-| [Builder Commands](/docs/reference/builder-commands.md) | Module commands |
-| [Create Your First Module](/docs/tutorials/create-your-first-module.md) | Module creation tutorial |
-| [What Are Modules](/docs/explanation/what-are-modules.md) | Module concepts |
+| [Builder Commands](/reference/builder-commands.md) | Module commands |
+| [Create Your First Module](/tutorials/create-your-first-module.md) | Module creation tutorial |
+| [What Are Modules](/explanation/what-are-modules.md) | Module concepts |

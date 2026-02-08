@@ -246,11 +246,11 @@ Study the reference agents in `src/workflows/agent/data/reference/`:
 
 | Resource | Description |
 |----------|-------------|
-| [What Are Agents](/docs/explanation/what-are-bmad-agents.md) | Deep technical details on agent architecture |
-| [Agent Schema](/docs/reference/agent-schema.md) | Complete field reference |
-| [Custom Content Installation](/docs/how-to/install-custom-modules.md) | Package and distribute your agents |
-| [Persona Development Guide](/docs/how-to/develop-agent-persona.md) | Advanced persona crafting |
-| [Principles Crafting Guide](/docs/explanation/crafting-agent-principles.md) | Write effective principles |
+| [What Are Agents](/explanation/what-are-bmad-agents.md) | Deep technical details on agent architecture |
+| [Agent Schema](/reference/agent-schema.md) | Complete field reference |
+| [Custom Content Installation](/how-to/install-custom-modules.md) | Package and distribute your agents |
+| [Persona Development Guide](/how-to/develop-agent-persona.md) | Advanced persona crafting |
+| [Principles Crafting Guide](/explanation/crafting-agent-principles.md) | Write effective principles |
 
 :::tip[Key Takeaways]
 - **Start small** - Your first agent should solve one problem well
