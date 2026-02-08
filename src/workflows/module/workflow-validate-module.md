@@ -63,4 +63,4 @@ Load and read full config from `{project-root}/_bmad/bmb/config.yaml` and resolv
 
 Ask: "What would you like to validate? Please provide the path to the module brief or module directory."
 
-Then load, read completely, and execute `{validateWorkflow}` (steps-v/step-01-validate.md)
+Then load, read completely, and execute `{validateWorkflow}` (steps-v/step-01-load-target.md)
