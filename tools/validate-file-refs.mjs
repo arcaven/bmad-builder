@@ -111,7 +111,7 @@ const FRONTMATTER_PATH_KEYS = new Set([
 const PROJECT_ROOT_REF = /\{project-root\}\/_bmad\/([^\s'"<>})\]`]+)/g;
 const RELATIVE_PATH_QUOTED = /['"](\.\.\/?[^'"]+\.(?:md|yaml|yml|xml|json|csv|txt))['"]/g;
 const RELATIVE_PATH_DOT = /['"](\.\/[^'"]+\.(?:md|yaml|yml|xml|json|csv|txt))['"]/g;
-const ABS_PATH_LEAK = /(?:\/Users\/|\/home\/|[A-Z]:\\\\)/;
+const ABS_PATH_LEAK = /(?:\/Users\/|\/home\/|[A-Z]:\\)/;
 
 // --- Helpers ---
 

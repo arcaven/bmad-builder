@@ -15,7 +15,7 @@
  *   8. CLI exit codes — default (0) vs --strict (1)
  *   9. Live source tree baseline — known broken ref ratchet
  *
- * Usage: node test/test-validate-file-refs.js
+ * Usage: node test/test-validate-file-refs.cjs
  * Exit codes: 0 = all tests pass, 1 = test failures
  */
 
@@ -25,7 +25,6 @@ const { execFile } = require('node:child_process');
 
 const TOOL_PATH = path.join(__dirname, '..', 'tools', 'validate-file-refs.mjs');
 const SRC_DIR = path.join(__dirname, '..', 'src');
-const FIXTURE_DIR = path.join(__dirname, 'fixtures', 'file-refs');
 
 // Known broken ref baseline — ratchet down as refs are fixed upstream
 const KNOWN_BASELINE = 30;
@@ -92,8 +91,8 @@ async function testExports() {
   try {
     // Dynamic import for ESM module from CJS test
     mod = await import(TOOL_PATH);
-  } catch (err) {
-    fail('Module import', `Cannot import validate-file-refs.mjs: ${err.message}`);
+  } catch (error) {
+    fail('Module import', `Cannot import validate-file-refs.mjs: ${error.message}`);
     return;
   }
 
@@ -127,7 +126,7 @@ async function testExports() {
 }
 
 /**
- * AC3: Path mapping — {project-root}/_bmad/bmb/ → src/
+ * AC2: Path mapping — {project-root}/_bmad/bmb/ → src/
  */
 async function testPathMapping() {
   section('AC2: Path mapping');
@@ -231,10 +230,10 @@ async function testExternalRefDetection() {
   }
 
   // Own module ref is NOT external
-  if (!isExternalRef('{project-root}/_bmad/bmb/workflows/workflow/workflow-create-workflow.md', 'bmb')) {
-    pass('bmb/ ref', 'detected as internal');
-  } else {
+  if (isExternalRef('{project-root}/_bmad/bmb/workflows/workflow/workflow-create-workflow.md', 'bmb')) {
     fail('bmb/ ref', 'incorrectly detected as external');
+  } else {
+    pass('bmb/ ref', 'detected as internal');
   }
 
   // bmm module ref is external
@@ -286,10 +285,10 @@ async function testBracketedPlaceholders() {
   ];
 
   for (const ref of nonTemplates) {
-    if (!isBracketedPlaceholder(ref)) {
-      pass(`Non-template: ${ref}`, 'not detected as placeholder');
-    } else {
+    if (isBracketedPlaceholder(ref)) {
       fail(`Non-template: ${ref}`, 'incorrectly detected as placeholder');
+    } else {
+      pass(`Non-template: ${ref}`, 'not detected as placeholder');
     }
   }
 }
@@ -407,7 +406,7 @@ async function testLiveBaseline() {
     // If --json isn't supported yet, count from text output
     const brokenMatch = result.stdout.match(/Broken references:\s*(\d+)/);
     const issueMatch = result.stdout.match(/Issues found:\s*(\d+)/);
-    const count = brokenMatch ? parseInt(brokenMatch[1], 10) : issueMatch ? parseInt(issueMatch[1], 10) : -1;
+    const count = brokenMatch ? Number.parseInt(brokenMatch[1], 10) : issueMatch ? Number.parseInt(issueMatch[1], 10) : -1;
 
     if (count === -1) {
       fail('Baseline count', 'Cannot parse broken ref count from output');
@@ -417,7 +416,7 @@ async function testLiveBaseline() {
     data = { brokenCount: count };
   }
 
-  const brokenCount = data.brokenCount || data.broken_refs || 0;
+  const brokenCount = data.brokenCount ?? data.broken_refs ?? 0;
 
   if (brokenCount <= KNOWN_BASELINE) {
     pass('Baseline ratchet', `${brokenCount} broken refs <= ${KNOWN_BASELINE} baseline`);
@@ -471,10 +470,10 @@ async function testResolvableSkipLogic() {
   const unresolvable = ['{bmb_creations_output_folder}/workflows/plan.md', '{output_folder}/report.md', '{{template_var}}/file.md'];
 
   for (const ref of unresolvable) {
-    if (!isResolvable(ref)) {
-      pass(`Unresolvable: ${ref}`, 'correctly skipped');
-    } else {
+    if (isResolvable(ref)) {
       fail(`Unresolvable: ${ref}`, 'should be skipped');
+    } else {
+      pass(`Unresolvable: ${ref}`, 'correctly skipped');
     }
   }
 }
@@ -542,14 +541,14 @@ async function main() {
       console.log(`${colors.red}✗${colors.reset} ${f.name}`);
       console.log(`  ${f.reason}\n`);
     }
-    process.exit(1);
+    process.exitCode = 1;
+    return;
   }
 
   console.log(`${colors.green}All tests passed!${colors.reset}\n`);
-  process.exit(0);
 }
 
 main().catch((error) => {
   console.error(`${colors.red}Fatal error:${colors.reset}`, error);
-  process.exit(1);
+  process.exitCode = 1;
 });
