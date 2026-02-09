@@ -50,10 +50,6 @@
       "markdownlint-cli2"
     ]
   },
-  "dependencies": {
-    "chalk": "^4.1.2",
-    "fs-extra": "^11.3.0"
-  },
   "devDependencies": {
     "@astrojs/sitemap": "^3.6.0",
     "@astrojs/starlight": "^0.37.0",
