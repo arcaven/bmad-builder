@@ -13,3 +13,7 @@ bmb_creations_output_folder:
   prompt: "Where should your custom agents, workflows, and modules be saved?"
   default: "{output_folder}/bmb-creations"
   result: "{project-root}/{value}"
+
+# Directories to create during installation (declarative, no code execution)
+directories:
+  - "{bmb_creations_output_folder}"

@@ -1,0 +1,11 @@
+# Fixture: valid internal {project-root}/_bmad/bmb/ ref
+# Expected: VALID (maps to src/workflows/workflow/workflow-create-workflow.md)
+agent:
+  metadata:
+    id: test-agent
+    name: Test
+    module: bmb
+  menu:
+    - trigger: CW or fuzzy match on create-workflow
+      exec: "{project-root}/_bmad/bmb/workflows/workflow/workflow-create-workflow.md"
+      description: "Test menu item"
