@@ -36,6 +36,7 @@ Create custom agents, workflows, and modules for BMad. This ranges from simple p
 |-------|-------------|
 | **[Workflow Patterns](/explanation/workflow-patterns.md)** | Structure types, intent spectrum, and execution patterns |
 | **[Workflow Customization](/explanation/customize-workflows.md)** | Tri-modal structure, cross-mode integration, and modification |
+| **[Plan for Workflows and Skills to Evolve](/explanation/plan-for-workflows-skills-to-evolve.md)** | Why first drafts fail and how to iterate intelligently |
 
 ## Agent Deep Dives
 
