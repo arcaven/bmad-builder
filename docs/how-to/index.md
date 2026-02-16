@@ -33,6 +33,7 @@ Step-by-step guides for completing specific tasks with BMad Builder.
 | Guide | Description |
 |-------|-------------|
 | **[Add Workflows to Existing Modules](/how-to/add-workflows-to-modules.md)** | Extend modules with new workflows including epic-level looping workflows |
+| **[Create Extension Modules](/how-to/create-extension-modules.md)** | Add custom agents and workflows to existing BMad modules that survive updates |
 
 ## Installation
 
