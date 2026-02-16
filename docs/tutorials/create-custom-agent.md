@@ -34,7 +34,7 @@ BMad uses **one agent type** with a `hasSidecar` boolean configuration:
 hasSidecar: false  # or true
 ```
 
-The difference is not capability — all agents have equal power. The difference is in **memory and state management**.
+When this is true, it means it contains a folder along with the agent template, that can include memory that persists sessions once installed, and may also contain its own data files or workflows and skills.
 
 ### Decision Guide
 
@@ -224,7 +224,8 @@ _bmad/
 ## Common Questions
 
 **Should I use hasSidecar true or false?**
-Use `false` for focused, one-off tasks. Use `true` when you need memory across sessions or restricted file access.
+- Use `false` for focused, one-off simple agents that can house all their commands in the agent file or utilize other external workflow or skills - and not NOT require to remember across sessions.
+- Use `true` when you need memory across sessions or restricted file access.
 
 **How do I add more commands later?**
 Edit the agent YAML directly or use the customization file in `_bmad/_config/agents/`. Then rebuild.

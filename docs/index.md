@@ -44,7 +44,7 @@ This isn't just for developers. This is for anyone who's ever thought "there sho
 | **Workflows** | Wendy | Structured processes that guide you through complex challenges step-by-step |
 | **Modules** | Morgan | Entire ecosystems you can share with the world (or sell) |
 
-**The secret sauce:** Unlike plugins that die in isolation, BMad modules form an intelligent network. Agents know when to suggest workflows. Workflows call the right agents automatically. The help system knows what you're trying to do before you do.
+**The secret sauce:** Unlike plugins that die in isolation, BMad modules form an intelligent network. Agents know when to suggest workflows. Workflows complete and suggest the next workflow or multiple options to follow up with. The help system knows what you're trying to do before you do.
 
 ## Build Anything (Seriously)
 
