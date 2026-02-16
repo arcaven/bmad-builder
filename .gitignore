@@ -37,7 +37,7 @@ CLAUDE.local.md
 .claude/settings.local.json
 
 z*/
-
+.claude/commands
 _bmad
 _bmad-output
 .clinerules
@@ -49,7 +49,6 @@ _bmad-output
 .qwen
 .rovodev
 .kilocodemodes
-.claude
 .codex
 
 # Astro / Documentation Build
