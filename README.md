@@ -4,99 +4,57 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Discord](https://img.shields.io/badge/Discord-Join%20Community-7289da?logo=discord&logoColor=white)](https://discord.gg/gk8jAdXWmj)
 
-**Build More, Build better.** Create custom BMad agents, workflows, and domain-specific modules with guided assistance.
+**Build More, Architect Dreams... With the BMad Builder!**
 
-## About BMad Builder
+BMad Builder is so much more than a skill builder. BMad Method modules support:
 
-BMad Builder (BMB) is a meta-module for BMad Method that helps you create your own agents and workflows. Whether you're building domain-specific expertise or automating repetitive development tasks, BMB guides you through:
+- **Agents** that transform your AI tool into exactly who you need to talk to — with memory that persists across sessions
+- **Workflows** that go far beyond simple tasks into truly guided, facilitated processes that can produce near-infinite steps and turns as needed
+- **Modules** that are entire ecosystems, not just skill packs — like the BMad Method module for agile AI-driven development. You can create simpler or vastly more complex modules for any entertainment or work purpose.
 
-- **Agent Builder** — Create specialized AI agents with custom expertise, communication styles, and tool access
-- **Workflow Builder** — Design structured workflows with steps, menus, and cross-workflow communication
-- **Module Builder** — Package agents and workflows into shareable BMad modules
+## The Dream
 
-## Installation
+Imagine AI that truly knows you — a fitness coach that remembers every PR, a writing partner that knows your characters better than you do, a research assistant that learns your preferences.
 
-BMad Builder is installed as a module during BMad Method setup:
+BMad Builder lets you create:
 
-```bash
-npx bmad-method@alpha install
-```
+- **Personal AI Companions** — Agents with memory that evolve with you over time
+- **Domain Experts** — Specialists for any field: legal, medical, creative, technical
+- **Workflow Automations** — Structured processes that guide you through complex tasks
+- **Custom Modules** — Bundle agents and workflows into shareable packages that can empower any type of business or domain
 
-Select **BMad Builder** from the modules list.
+## What Makes It Different
 
-## Quick Start
-
-After installing BMad Method with BMB, run from your project root:
-
-```
-/bmb-agent
-```
-
-This launches the Agent Builder workflow that guides you through creating a custom agent.
+| Feature | Why It Matters |
+|---------|----------------|
+| **Persistent Memory** | Agents remember across sessions — they learn and grow |
+| **Composable** | Your creations work alongside the entire BMad ecosystem |
+| **Skill-Compliant** | Built on open standards that work with any AI tool |
+| **Shareable** | Package your modules for the BMad Marketplace (coming soon) |
 
 ## What You Can Build
 
-| Type | Description | Workflow |
-|------|-------------|----------|
-| **Agents** | Domain experts with specialized knowledge and tools | `/bmb-agent` |
-| **Workflows** | Structured processes with steps and decision points | `/bmb-workflow` |
-| **Modules** | Packaged agents + workflows ready to share | `/bmb-module` |
+| Domain | Example |
+|--------|---------|
+| **Personal** | Journal companion, habit coach, learning tutor |
+| **Professional** | Code reviewer, documentation specialist, workflow automator |
+| **Creative** | Story architect, character developer, campaign designer |
+| **Any Domain** | If you can describe it, you can build it |
 
-## Example: Creating a Domain Expert Agent
+## Learn More
 
-```
-You: /bmb-agent
-BMB: What domain should this agent specialize in?
-You: Blockchain Development
-BMB: Great! A blockchain expert would need to know about...
-    [Guides you through agent configuration]
-```
+**[Documentation and Quick Start](https://bmad-builder-docs.bmad-method.org)**
 
-## Module Structure
-
-BMad modules follow a standard structure:
-
-```
-your-module/
-├── src/
-│   ├── module.yaml      # Module metadata and install config
-│   ├── agents/          # Agent definitions (.agent.yaml)
-│   ├── workflows/       # Workflow files
-│   └── tools/           # Small reusable tools
-└── package.json         # NPM package info
-```
-
-## Publishing Your Module
-
-When your module is ready to share:
-
-```bash
-# Bump version and create git tag
-npm run release
-
-# Or manually:
-git tag v1.0.0
-git push origin v1.0.0
-```
-
-See [bmad-module-template](https://github.com/bmad-code-org/bmad-module-template) for a starting point.
-
-## Documentation
-
-**[BMad Builder Documentation](http://bmad-builder-docs.bmad-method.org)** — Tutorials, how-to guides, and reference
-
-- [Getting Started](http://bmad-builder-docs.bmad-method.org/tutorials/)
-- [BMad Method Docs](http://docs.bmad-method.org) — Core framework documentation
+Complete guides for building agents, workflows, and modules.
 
 ## Community
 
-- [Discord](https://discord.gg/gk8jAdXWmj) — Get help and share your creations
-- [GitHub Issues](https://github.com/bmad-code-org/bmad-builder/issues) — Bug reports and feature requests
-- [Discussions](https://github.com/bmad-code-org/BMAD-METHOD/discussions) — Community conversations
+- **[Discord](https://discord.gg/gk8jAdXWmj)** — Get help and share what you've built
+- **[BMad Method](https://docs.bmad-method.org)** — Core framework documentation
 
 ## License
 
-MIT License — see [LICENSE](LICENSE) for details.
+MIT — see [LICENSE](LICENSE) for details.
 
 ---
 

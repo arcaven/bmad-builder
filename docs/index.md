@@ -7,22 +7,13 @@ description: BMad Builder - Build AI agents, workflows, and modules
 
 Build custom AI agents, workflows, and modules.
 
-## Quick Links
+## Quick Start
 
-| Section | Purpose |
-| ------- | ------- |
-| **[Tutorials](/tutorials/)** | Start building |
-| **[How-To Guides](/how-to/)** | Specific techniques |
-| **[Explanation](/explanation/)** | Concepts |
-| **[Reference](/reference/)** | Technical specs |
-
-## Start Here
-
-| Tutorial | What You'll Build | Time |
-|----------|-------------------|------|
-| **[Create a Custom Agent](/tutorials/create-custom-agent.md)** | AI persona with memory | 15-30 min |
-| **[Create Your First Workflow](/tutorials/create-your-first-workflow.md)** | Structured process | 30-45 min |
-| **[Create Your First Module](/tutorials/create-your-first-module.md)** | Package and share | 45-60 min |
+| Guide | What You'll Build | Time |
+|-------|-------------------|------|
+| **[Create a Custom Agent](/how-to/create-custom-agent.md)** | AI persona with memory and commands | 15-30 min |
+| **[Create Your First Workflow](/how-to/create-your-first-workflow.md)** | Structured step-by-step process | 30-45 min |
+| **[Bundle Your Creations](/how-to/bundle-your-creations.md)** | Package for installation | 10-15 min |
 
 ## What You're Building
 
@@ -30,11 +21,11 @@ Build custom AI agents, workflows, and modules.
 |------|--------------|---------|
 | **Agents** | AI personas with memory and personality | `bmad-bmb-create-agent` |
 | **Workflows** | Structured multi-step processes | `bmad-bmb-create-workflow` |
-| **Modules** | Bundled agents and workflows | `bmad-bmb-product-brief` |
+| **Modules** | Bundled agents and workflows | See Bundle Your Creations |
 
-## Build for Any Domain
+## Not Just for Software
 
-BMad isn't just for software:
+BMad works for any domain:
 
 | Domain | Example |
 |--------|---------|
@@ -44,6 +35,14 @@ BMad isn't just for software:
 | **Fitness** | Coach that evolves with your progress |
 | **Learning** | Tutor that adapts to your style |
 | **Cooking** | Personal Chef for ingredients on hand |
+
+## Documentation
+
+| Section | Purpose |
+| ------- | ------- |
+| **[How-To Guides](/how-to/)** | Step-by-step instructions |
+| **[Explanation](/explanation/)** | Concepts and architecture |
+| **[Reference](/reference/)** | Technical specs |
 
 ## Community
 
