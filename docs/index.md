@@ -1,11 +1,31 @@
 ---
 title: Welcome
-description: BMad Builder - Build AI agents, workflows, and modules
+description: BMad Builder - Build More, Architect Dreams
 ---
 
-# BMad Builder
+# BMad Builder - A BMad Method EcoSystem Module
 
-Build custom AI agents, workflows, and modules.
+**Build More, Architect Dreams.**
+
+## The Dream
+
+Imagine AI that truly knows you — a fitness coach that remembers every PR, a writing partner that knows your characters better than you do, a research assistant that learns your preferences.
+
+BMad Builder lets you create:
+
+- **Personal AI Companions** — Agents with memory that evolve with you over time
+- **Domain Experts** — Specialists for any field: legal, medical, creative, technical
+- **Workflow Automations** — Structured processes that guide you through complex tasks
+- **Custom Modules** — Bundle agents and workflows into shareable packages
+
+## What Makes It Different
+
+| Feature | Why It Matters |
+|---------|----------------|
+| **Persistent Memory** | Agents remember across sessions — they learn and grow |
+| **Composable** | Your creations work alongside the entire BMad ecosystem |
+| **Skill-Compliant** | Built on open standards that work with any AI tool |
+| **Shareable** | Package your modules for the BMad Marketplace (coming soon) |
 
 ## Quick Start
 
@@ -15,26 +35,14 @@ Build custom AI agents, workflows, and modules.
 | **[Create Your First Workflow](/how-to/create-your-first-workflow.md)** | Structured step-by-step process | 30-45 min |
 | **[Bundle Your Creations](/how-to/bundle-your-creations.md)** | Package for installation | 10-15 min |
 
-## What You're Building
-
-| Type | What It Does | Command |
-|------|--------------|---------|
-| **Agents** | AI personas with memory and personality | `bmad-bmb-create-agent` |
-| **Workflows** | Structured multi-step processes | `bmad-bmb-create-workflow` |
-| **Modules** | Bundled agents and workflows | See Bundle Your Creations |
-
-## Not Just for Software
-
-BMad works for any domain:
+## What You Can Build
 
 | Domain | Example |
 |--------|---------|
-| **Mental Health** | Therapist Agent that remembers patterns |
-| **Money** | Tax Workflow that finds deductions |
-| **Creative** | Story Architect with character arcs |
-| **Fitness** | Coach that evolves with your progress |
-| **Learning** | Tutor that adapts to your style |
-| **Cooking** | Personal Chef for ingredients on hand |
+| **Personal** | Journal companion, habit coach, learning tutor, friendly personal companions that remember |
+| **Professional** | Code reviewer, documentation specialist, workflow automator |
+| **Creative** | Story architect, character developer, campaign designer |
+| **Any Domain** | If you can describe it, you can build it |
 
 ## Documentation
 
