@@ -3,7 +3,7 @@ title: "BMad Builder (BMB)"
 description: Create custom agents, workflows, and modules for BMad
 ---
 
-Create custom agents, workflows, and modules for BMad. This ranges from simple personal assistants to full-featured professional tools.
+Create custom agents, workflows, and modules for BMad.
 
 ## Quick Start
 
@@ -13,18 +13,11 @@ Create custom agents, workflows, and modules for BMad. This ranges from simple p
 | **[Create Your First Workflow](/tutorials/create-your-first-workflow.md)** | Design structured workflows |
 | **[Create Your First Module](/tutorials/create-your-first-module.md)** | Package and publish modules |
 
-## The Three Builders
-
-| Builder | Creates | Description |
-|---------|---------|-------------|
-| **[Bond](/explanation/bond-wendy-morgan.md)** | Agents | Agent architecture and persona development |
-| **[Wendy](/explanation/bond-wendy-morgan.md)** | Workflows | Process design and step architecture |
-| **[Morgan](/explanation/bond-wendy-morgan.md)** | Modules | Full-stack systems design |
-
 ## Core Concepts
 
 | Topic | Description |
 |-------|-------------|
+| **[What to Build](/explanation/what-to-build.md)** | Decide whether to build an agent, workflow, or module |
 | **[What Are Agents](/explanation/what-are-bmad-agents.md)** | AI personas with specialized capabilities |
 | **[What Are Workflows](/explanation/what-are-workflows.md)** | Structured step-by-step processes |
 | **[What Are Modules](/explanation/what-are-modules.md)** | Bundles of agents and workflows |
@@ -35,8 +28,8 @@ Create custom agents, workflows, and modules for BMad. This ranges from simple p
 | Topic | Description |
 |-------|-------------|
 | **[Workflow Patterns](/explanation/workflow-patterns.md)** | Structure types, intent spectrum, and execution patterns |
-| **[Workflow Customization](/explanation/customize-workflows.md)** | Tri-modal structure, cross-mode integration, and modification |
-| **[Plan for Workflows and Skills to Evolve](/explanation/plan-for-workflows-skills-to-evolve.md)** | Why first drafts fail and how to iterate intelligently |
+| **[Workflow Customization](/explanation/customize-workflows.md)** | Tri-modal structure and cross-mode integration |
+| **[Plan for Iteration](/explanation/plan-for-workflows-skills-to-evolve.md)** | Iteration strategy for workflows |
 
 ## Agent Deep Dives
 
@@ -48,16 +41,6 @@ Create custom agents, workflows, and modules for BMad. This ranges from simple p
 
 | Topic | Description |
 |-------|-------------|
-| **[Understanding Module Building](/explanation/module-building-architecture.md)** | How module creation works from planning to scaffolding to implementation |
-
-## Ecosystem Vision
-
-| Topic | Description |
-|-------|-------------|
-| **[The Module Ecosystem Vision](/explanation/module-ecosystem-vision.md)** | How BMad modules create a shared ecosystem of capabilities across every domain |
-
-## Advanced Topics
-
-| Topic | Description |
-|-------|-------------|
-| **[Facilitation vs Generation](/explanation/facilitation-over-generation.md)** | Workflow design philosophy | |
+| **[Understanding Module Building](/explanation/module-building-architecture.md)** | How module creation works from planning to implementation |
+| **[Facilitation Over Generation](/explanation/facilitation-over-generation.md)** | A facilitation-first approach to AI workflows |
+| **[The Module Ecosystem Vision](/explanation/module-ecosystem-vision.md)** | How modules create a shared ecosystem of expertise |

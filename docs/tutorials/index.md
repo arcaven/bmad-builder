@@ -1,38 +1,19 @@
 ---
 title: Tutorials
-description: Step-by-step tutorials for BMad Builder
+description: Learn BMad Builder through concrete examples
 ---
 
 # Tutorials
 
-Learn BMad Builder through step-by-step tutorials.
+Learn BMad Builder through hands-on examples.
 
-## Your Imagination Is The Limit
-
-**BMad modules aren't just for software.** With these tutorials, you'll learn to build for ANY domain:
-
-| Domain | What You Could Build |
-|--------|---------------------|
-| **Personal Growth** | A therapist agent that remembers your goals and sessions |
-| **Legal** | A complete practice module with document drafter and case researcher |
-| **Creative Writing** | A story architect with character development and plot workflows |
-| **Finance** | A tax preparation workflow that finds deductions others miss |
-| **Education** | A personal tutor that adapts to your learning style |
-| **Health** | A fitness coach that evolves with your progress |
-
-:::tip[The Marketplace Is Coming]
-Soon you'll be able to publish your modules to the BMad marketplace — where others can discover and benefit from your creations.
+:::note[Looking for How-To Guides?]
+Step-by-step procedures for specific tasks are in the **[How-To Guides](/how-to/index.md)** section. Real example tutorials coming soon!
 :::
 
-## Getting Started
+Tutorials coming soon. For now, see the How-To Guides for:
 
-| Tutorial | Description | Time |
-|----------|-------------|------|
-| **[Create a Custom Agent](/tutorials/create-custom-agent.md)** | Build your first AI agent with persona, commands, and memory | 15-30 min |
-| **[Create Your First Workflow](/tutorials/create-your-first-workflow.md)** | Design structured step-by-step workflows with progressive disclosure | 30-45 min |
-
-## Module Creation
-
-| Tutorial | Description | Builder | Time |
-|----------|-------------|---------|------|
-| **[Create Your First Module](/tutorials/create-your-first-module.md)** | Package agents and workflows into shareable modules | Morgan | 45-60 min |
+- **[Create a Custom Agent](/how-to/create-custom-agent.md)** — Build your first AI agent
+- **[Create Your First Workflow](/how-to/create-your-first-workflow.md)** — Design step-by-step processes
+- **[Bundle Your Creations](/how-to/bundle-your-creations.md)** — Package content for installation
+- **[Create Your First Module](/how-to/create-your-first-module.md)** — Design full modules

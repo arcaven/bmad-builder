@@ -1,12 +1,11 @@
 ---
-title: "Global Inheritable Config"
+title: "Global Config Reference"
+description: Core configuration values inherited by all modules
 ---
 
-Configuration values defined in the Core Module that all other modules inherit by default.
+Configuration values defined in Core that all modules inherit.
 
 ## Core Config Values
-
-These values are set during installation and recorded to the core `module.yaml`:
 
 | Config Key | Default | Description |
 |------------|---------|-------------|
@@ -15,14 +14,6 @@ These values are set during installation and recorded to the core `module.yaml`:
 | `document_output_language` | `english` | Language for generated documents |
 | `output_folder` | `_bmad-output` | Directory for workflow outputs |
 
-## Inheritance Behavior
+## Inheritance
 
-All installed modules automatically clone these values into their own config. Modules can:
-
-- **Accept defaults** — Use core values as-is (recommended)
-- **Override values** — Replace with module-specific settings
-- **Extend values** — Build on core values with additional paths
-
-:::tip[Extending Config]
-Use `{output_folder}` to reference the core value. Example: BMad Method defines `planning_artifacts` as `{output_folder}/planning-artifacts`, automatically inheriting whatever output folder the user configured.
-:::
+Modules can accept defaults, override values, or extend them using `{output_folder}`.

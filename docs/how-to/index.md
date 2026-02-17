@@ -7,36 +7,29 @@ description: Practical guides for specific BMad Builder tasks
 
 Step-by-step guides for completing specific tasks with BMad Builder.
 
-## Agent Development
+## Getting Started
 
 | Guide | Description |
 |-------|-------------|
-| **[Develop Agent Persona](/how-to/develop-agent-persona.md)** | Craft memorable agent personas using the four-field system |
-| **[Design Agent Menus](/how-to/design-agent-menus.md)** | Create effective, intuitive agent menus |
+| **[Agent or Module? What Should I Build?](/how-to/agent-or-module-decision.md)** | Decide what to build first |
 
-## Planning & Decision-Making
-
-| Guide | Description |
-|-------|-------------|
-| **[Agent or Module? What Should I Build?](/how-to/agent-or-module-decision.md)** | Decide whether to build a standalone agent or full module |
-| **[Discover Your Module Idea](/how-to/discover-your-module-idea.md)** | Find the perfect module idea by exploring your problems, expertise, and opportunities |
-
-## Editing & Validation
+## Creating
 
 | Guide | Description |
 |-------|-------------|
-| **[Edit Agents and Workflows](/how-to/edit-agents-and-workflows.md)** | Modify existing agents and workflows |
+| **[Create a Custom Agent](/how-to/create-custom-agent.md)** | Build your first AI agent with persona, commands, and memory |
+| **[Create Your First Workflow](/how-to/create-your-first-workflow.md)** | Design structured step-by-step workflows with progressive disclosure |
+
+## Packaging & Installation
+
+| Guide | Description |
+|-------|-------------|
+| **[Bundle Your Creations](/how-to/bundle-your-creations.md)** | Package agents and workflows as standalone modules |
+| **[Create Extension Modules](/how-to/create-extension-modules.md)** | Add custom agents and workflows to existing BMad modules |
+| **[Install Custom Modules](/how-to/install-custom-modules.md)** | Add your custom content to BMad |
+
+## Troubleshooting
+
+| Guide | Description |
+|-------|-------------|
 | **[Validate Agents and Workflows](/how-to/validate-agents-and-workflows.md)** | Check compliance and fix issues |
-
-## Workflow Development
-
-| Guide | Description |
-|-------|-------------|
-| **[Add Workflows to Existing Modules](/how-to/add-workflows-to-modules.md)** | Extend modules with new workflows including epic-level looping workflows |
-| **[Create Extension Modules](/how-to/create-extension-modules.md)** | Add custom agents and workflows to existing BMad modules that survive updates |
-
-## Installation
-
-| Guide | Description |
-|-------|-------------|
-| **[Install Custom Modules](/how-to/install-custom-modules.md)** | Add custom content to BMad | |
