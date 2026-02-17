@@ -8,7 +8,7 @@ Reference for `module.yaml` configuration files.
 ## Location
 
 ```
-your-module/src/module.yaml
+your-module-folder/module.yaml
 ```
 
 ## Required Fields
@@ -18,6 +18,7 @@ name: "Module Name"
 code: "module-code"
 version: "0.1.0"
 description: "What this module does"
+extends-module: "other-module-code" # Optional property that indicates you want to tie in to the other modules help sequence and extend the module with new features
 ```
 
 | Field | Type | Description |

@@ -49,11 +49,3 @@ your-module/
 | Workflows | `bmad-bmb-create-workflow` |
 
 **What gets created:** Full agent files, detailed workflow steps, actual functionality
-
-## Common Confusions
-
-| Confusion | Reality |
-|-----------|----------|
-| Module builder creates agents | Creates agent specs — you build actual agents |
-| Write prompts in the brief | Brief defines WHAT, prompts come later |
-| Module is done after scaffolding | Scaffolding creates structure, not content |

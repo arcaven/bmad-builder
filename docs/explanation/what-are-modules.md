@@ -2,7 +2,7 @@
 title: "Modules"
 ---
 
-Modules are bundles of agents, workflows, and configuration that solve specific problems.
+Modules are bundles of agents, workflows, and configuration that solve specific problems or serve a cohesive purpose. What makes modules unique from say generic skill plugin packs is that they integrate together with other modules and cohesively meld into the bmad help and recommendation engine and workflow sequencing!
 
 ## What Is a Module?
 

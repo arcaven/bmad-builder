@@ -9,33 +9,25 @@ Create custom agents, workflows, and modules for BMad.
 
 | Resource | Description |
 |----------|-------------|
-| **[Create a Custom Agent](/tutorials/create-custom-agent.md)** | Build your first AI agent |
-| **[Create Your First Workflow](/tutorials/create-your-first-workflow.md)** | Design structured workflows |
-| **[Create Your First Module](/tutorials/create-your-first-module.md)** | Package and publish modules |
+| **[Create a Custom Agent](/how-to/create-custom-agent.md)** | Build your first AI agent |
+| **[Create Your First Workflow](/how-to/create-your-first-workflow.md)** | Design structured workflows |
+| **[Bundle Your Creations](/how-to/bundle-your-creations.md)** | Package and install modules |
 
 ## Core Concepts
 
 | Topic | Description |
 |-------|-------------|
-| **[What to Build](/explanation/what-to-build.md)** | Decide whether to build an agent, workflow, or module |
+| **[Agent or Module?](/how-to/agent-or-module-decision.md)** | Decide what to build first |
 | **[What Are Agents](/explanation/what-are-bmad-agents.md)** | AI personas with specialized capabilities |
 | **[What Are Workflows](/explanation/what-are-workflows.md)** | Structured step-by-step processes |
 | **[What Are Modules](/explanation/what-are-modules.md)** | Bundles of agents and workflows |
-| **[Custom Content Types](/explanation/custom-content-types.md)** | Content categories in BMad |
 
 ## Workflow Design
 
 | Topic | Description |
 |-------|-------------|
-| **[Workflow Patterns](/explanation/workflow-patterns.md)** | Structure types, intent spectrum, and execution patterns |
-| **[Workflow Customization](/explanation/customize-workflows.md)** | Tri-modal structure and cross-mode integration |
+| **[Workflow Patterns](/reference/workflow-patterns.md)** | Structure types, intent spectrum, and execution patterns |
 | **[Plan for Iteration](/explanation/plan-for-workflows-skills-to-evolve.md)** | Iteration strategy for workflows |
-
-## Agent Deep Dives
-
-| Topic | Description |
-|-------|-------------|
-| **[Crafting Agent Principles](/explanation/crafting-agent-principles.md)** | Write effective principles that activate expert knowledge |
 
 ## Architecture & Process
 
