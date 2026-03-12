@@ -17,7 +17,7 @@
  *   - Relative refs resolving outside src/ (../../../../core/)
  *   - Install-generated files (config.yaml, docs/ KBs)
  *   - Template placeholders ([N], [name], [template])
- *   - Runtime variables ({output_folder}, {bmb_creations_output_folder}, etc.)
+ *   - Runtime variables ({output_folder}, {bmad_builder_output_folder}, etc.)
  *   - {{mustache}} template variables
  *   - Lines with <!-- validate-file-refs:ignore --> comment
  *   - Lines after <!-- validate-file-refs:ignore-next-line --> comment
@@ -70,7 +70,7 @@ const UNRESOLVABLE_VARS = [
   '{research_topic}',
   '{user_name}',
   '{communication_language}',
-  '{bmb_creations_output_folder}',
+  '{bmad_builder_output_folder}',
   '{new_workflow_name}',
   '{module_code}',
   '{workflow_name}',

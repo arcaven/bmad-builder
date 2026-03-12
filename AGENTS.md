@@ -90,7 +90,7 @@ your-module/
 
 ### Path Variables
 - `{project-root}/_bmad/bmb/` — Installation path (in repo, maps to `src/`)
-- `{bmb_creations_output_folder}` — User's custom content output
+- `{bmad_builder_output_folder}` — User's custom content output
 - Runtime variables: `{output_folder}`, `{project-root}` from Core config
 
 ## Development Notes

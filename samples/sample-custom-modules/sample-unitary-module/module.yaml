@@ -1,8 +1,0 @@
-code: my-custom-1
-name: "my-custom-1: Sample Stand Alone Custom Agents and Workflows"
-default_selected: true
-
-# Variables from Core Config inserted:
-## user_name
-## communication_language
-## output_folder

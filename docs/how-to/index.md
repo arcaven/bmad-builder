@@ -1,11 +1,11 @@
 ---
 title: How-To Guides
-description: Practical guides for specific BMad Builder tasks
+description: Practical guides for BMad Builder tasks
 ---
 
 # How-To Guides
 
-Step-by-step guides for completing specific tasks with BMad Builder.
+Step-by-step guides for building with BMad Builder.
 
 ## Getting Started
 
@@ -17,16 +17,16 @@ Step-by-step guides for completing specific tasks with BMad Builder.
 
 | Guide | Description |
 |-------|-------------|
-| **[Create a Custom Agent](/how-to/create-custom-agent.md)** | Build your first AI agent with persona, commands, and memory |
-| **[Create Your First Workflow](/how-to/create-your-first-workflow.md)** | Design structured step-by-step workflows with progressive disclosure |
+| **[Create a Custom Agent](/how-to/create-custom-agent.md)** | Build your first AI agent with persona, capabilities, and memory |
+| **[Create Your First Workflow](/how-to/create-your-first-workflow.md)** | Design structured step-by-step workflows |
 
-## Packaging & Installation
+## Packaging & Sharing
 
 | Guide | Description |
 |-------|-------------|
-| **[Bundle Your Creations](/how-to/bundle-your-creations.md)** | Package agents and workflows as standalone modules |
+| **[Bundle Your Creations](/how-to/bundle-your-creations.md)** | Package agents and workflows for sharing |
 | **[Create Extension Modules](/how-to/create-extension-modules.md)** | Add custom agents and workflows to existing BMad modules |
-| **[Install Custom Modules](/how-to/install-custom-modules.md)** | Add your custom content to BMad |
+| **[Install Custom Modules](/how-to/install-custom-modules.md)** | Add custom content to BMad |
 
 ## Troubleshooting
 
