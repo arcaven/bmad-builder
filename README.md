@@ -4,7 +4,13 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Discord](https://img.shields.io/badge/Discord-Join%20Community-7289da?logo=discord&logoColor=white)](https://discord.gg/gk8jAdXWmj)
 
-IMPORTANT NOTE: The BMad Builder is undergoing a massive redesign and transformation to skills. To test the current agent builder, and soon to come workflow builder replacement - copy the 3 skills as is from the skills folder and add them to a project folders tool skill folder. This a still a work in progress. The agent builder works, the bmad-init is unoptimized and an experiment that may become a skill in the core later as a skill based installer option.
+> **🚧 OVERHAUL IN PROGRESS**
+>
+> BMad Builder is being overhauled. To help test and provide feedback on the new skills, copy any of the skill or sample folders from `skills/` or `samples/` directly into your tool's skills folder and activate them like any other skill.
+>
+> **Setup:** The `bmad-init` skill and `manifest-bmb` skill (both in `skills/`) should also be added — when workflows run, they will instruct you to set up a `_bmad` folder with a configuration file.
+>
+> **Note:** This module may be temporarily non-functional with the bmad main installer. It will be fixed and re-enabled on Friday, March 13, 2026.
 
 **Build More, Architect Dreams... With the BMad Builder!**
 
