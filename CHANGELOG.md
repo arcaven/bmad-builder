@@ -1,17 +1,9 @@
 # Changelog
 
-## [0.1.5] - 2026-02-04
+## [1.0.0] - 2026-03-15
 
-### Added
-- Individual slash commands for each piece of trivariate workflows
+### Release
 
-### Fixed
-- Updated jest to ^30.2.0 to fix installation failure
+First official v1 release of BMad Builder — a standard skill-compliant factory for creating BMad Agents, Workflows, and Modules.
+The module specific skill is coming soon pending alignment on final format with skill transition.
 
-## [0.1.4] - 2026-02-04
-
-### Added
-- Individual slash commands for each piece of trivariate workflows
-
-### Fixed
-- Updated jest to ^30.2.0 to fix installation failure
